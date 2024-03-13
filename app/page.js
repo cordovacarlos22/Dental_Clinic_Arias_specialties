@@ -2,7 +2,9 @@
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <main className="bg-red-400">
+      Home
+    </main>
   )
 }
 
