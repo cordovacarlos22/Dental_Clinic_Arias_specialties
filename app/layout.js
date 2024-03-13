@@ -1,10 +1,15 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
+export const metadata =  {
+  title: {
+    default:"Clinica Arias - Especialidades Dentales",
+    template:"\$ Clinica Arias - Especialidades Dentales ",
+    image:"./opengraph-image.png"
 
-export const metadata = {
-  title: "Clinica Arias - Especialidades Dentales",
+  },
   description: "Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.",
   
 };
