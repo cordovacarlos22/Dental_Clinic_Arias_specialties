@@ -1,6 +1,6 @@
-import React from 'react'
 
-const Dentita = ({params}) => {
+
+const Dentista = ({params}) => {
   return (
     <>
     <h1>hola dentista {params.nombreDentista}</h1>
@@ -8,4 +8,4 @@ const Dentita = ({params}) => {
   )
 }
 
-export default Dentita;
+export default Dentista;
