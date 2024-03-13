@@ -1,18 +1,34 @@
 
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { Metadata } from "next";
-const inter = Inter({ subsets: ["latin"] });
+
 export const metadata =  {
-  title:"Clinica Arias - Especialidades Dentales",
-  description: "Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.",
   
+
+  metadataBase: new URL('http://localhost:3000'),
+  title: " Especialidades Dentales - Clinica Arias ",
+  description: "Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.",
+  url: 'http://localhost:3000',
+  siteName: 'Clinica Arias - Especialidades Dentales ',
+  locale: 'es_SV',
+  type: 'website',
+  openGraph: {
+    title: 'Especialidades Dentales - Clinica Arias',
+    description: 'Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.',
+    image: './opengraph-image.png'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: 'http://localhost:3000',
+    title: 'Especialidades Dentales - Clinica Arias',
+    description: 'Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.',
+    image: './opengraph-image.png'
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
