@@ -1,16 +1,22 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/logo.svg";
 import cruzRoja from "../public/CRUZ ROJA.svg";
 import mapLogo from "../public/map logo.svg";
+import { usePathname } from "next/navigation";
+
+
+
 const Navbar = () => {
+  const path = usePathname();
   return (
     <>
-      <nav className="hidden  md:flex  h-40  items-center justify-around">
+      <nav className="hidden  md:flex  h-40  items-center justify-around relative">
         {/* logo section */}
         <section className="logo-container ">
           <Link href="/">
-            <Image src={logo} alt="clinica arias logo" />
+            <Image src={logo}  alt="clinica arias logo" />
 
           </Link>
         </section>
@@ -38,8 +44,31 @@ const Navbar = () => {
             </Link>
           </button>
         </section>
+        <ul className="flex gap-5 absolute bottom-2 text-lg">
+          <li>
+            {path === "/" ?
+              (
+                ''
+              ) :
+              (
+                <Link href="/">Inicio</Link>
+              )}
+          </li>
+          <li>
+            <Link href="/servicios">Servicios</Link>
+          </li>
+          <li>
+            <Link href="/dentistas">Nuestro Equipo</Link>
+          </li>
+          <li>
+            <Link href="/acerca">Quienes Somos</Link>
+          </li>
+          <li>
+            <Link href="/acerca">Contactenos</Link>
+          </li>
+        </ul>
       </nav>
-
+      
       <nav className="mobile bg-black flex md:hidden">
         <h1>mobile</h1>
       </nav>
