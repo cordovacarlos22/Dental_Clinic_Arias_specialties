@@ -15,12 +15,12 @@ module.exports = {
       },
       colors:{
         brand:{
-          darker: "#023047",
+          darker: "#0B4F6F",
           dark: "#0170A3",
           light: "#E0F3FE"
         }
       }
     },
   },
-  plugins: [],
+  plugins: [], 
 };
