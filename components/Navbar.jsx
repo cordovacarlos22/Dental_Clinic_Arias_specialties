@@ -46,17 +46,17 @@ const Navbar = () => {
         {/* emergencies section */}
         <section className="flex gap-2  item-center">
           <Image className=" md:size-8 lg:size-12" src={cruzRoja} alt="red cross"></Image>
-          <aside className="flex flex-col items-center font-extrabold ">
-            <p className="flex  text-brand-darker md:text-xs lg:text-lg">+503 7322-2299</p>
-            <p className="flex col text-brand-dark md:text-xs font-bold ">DISPONIBLES PARA EMERGENCIA</p>
+          <aside className="inline flex-col items-center font-extrabold ">
+            <p className="text-brand-darker md:text-xs lg:text-lg">+503 7322-2299</p>
+            <p className="text-brand-dark md:text-xs font-bold ">DISPONIBLES PARA EMERGENCIA</p>
           </aside>
         </section>
         {/* location section */}
         <section className="flex gap-2  item-center">
           <Image src={mapLogo} alt="map icon"></Image>
-          <aside className="flex flex-col items-center font-extrabold ">
-            <p className="flex  text-brand-darker md:text-xs lg:text-lg"> Final 5a Calle Poniente #14 Colonia San Manuel,</p>
-            <p className="flex col text-brand-dark md:text-xs lg:text">Atiquizaya, El Salvador(frente a Unidad de Salud)</p>
+          <aside className="inline flex-col items-center font-extrabold ">
+            <p className=" text-brand-darker md:text-xs lg:text-lg"> Final 5a Calle Poniente #14 Colonia San Manuel,</p>
+            <p className="text-brand-dark md:text-xs lg:text">Atiquizaya, El Salvador(frente a Unidad de Salud)</p>
           </aside>
         </section>
         {/* appointment section */}
