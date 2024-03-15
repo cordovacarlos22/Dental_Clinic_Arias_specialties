@@ -12,11 +12,11 @@ const Navbar = () => {
   const path = usePathname();
   return (
     <>
-      <nav className="hidden  md:flex  h-40  items-center justify-around relative">
+      <nav className="hidden md:flex  gap-1 h-40  items-center justify-around relative">
         {/* logo section */}
         <section className="logo-container ">
           <Link href="/">
-            <Image className="md:size-32 lg:size-64"  src={logo}  alt="clinica arias logo" />
+            <Image className="md:size-28 lg:size-64"  src={logo}  alt="clinica arias logo" />
 
           </Link>
         </section>
@@ -38,7 +38,7 @@ const Navbar = () => {
         </section>
         {/* appointment section */}
         <section>
-          <button className="bg-brand-darker text-white rounded-md p-2  md:w-20 hover:bg-brand-dark ">
+          <button className="bg-brand-darker text-white rounded-md p-2  md:w-28 hover:bg-brand-dark ">
             <Link href="./citas">
               Agende Hoy!
             </Link>
