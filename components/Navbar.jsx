@@ -16,29 +16,29 @@ const Navbar = () => {
         {/* logo section */}
         <section className="logo-container ">
           <Link href="/">
-            <Image src={logo}  alt="clinica arias logo" />
+            <Image className="md:size-32 lg:size-64"  src={logo}  alt="clinica arias logo" />
 
           </Link>
         </section>
         {/* emergencies section */}
         <section className="flex gap-2  item-center">
-          <Image src={cruzRoja} alt="red cross"></Image>
+          <Image className="size-8" src={cruzRoja} alt="red cross"></Image>
           <aside className="flex flex-col items-center font-extrabold ">
-            <p className="flex  text-brand-darker text-2xl">+503 7322-2299</p>
-            <p className="flex col text-brand-dark font-bold">DISPONIBLES PARA EMERGENCIA</p>
+            <p className="flex  text-brand-darker md:text-xs">+503 7322-2299</p>
+            <p className="flex col text-brand-dark md:text-xs font-bold ">DISPONIBLES PARA EMERGENCIA</p>
           </aside>
         </section>
         {/* location section */}
         <section className="flex gap-2  item-center">
-          <Image src={mapLogo} alt="map icon"></Image>
+          <Image  src={mapLogo} alt="map icon"></Image>
           <aside className="flex flex-col items-center font-extrabold ">
-            <p className="flex  text-brand-darker text-lg"> Final 5a Calle Poniente #14 Colonia San Manuel,</p>
-            <p className="flex col text-brand-dark font-bold">Atiquizaya, El Salvador(frente a Unidad de Salud)</p>
+            <p className="flex  text-brand-darker md:text-xs"> Final 5a Calle Poniente #14 Colonia San Manuel,</p>
+            <p className="flex col text-brand-dark md:text-xs lg:text">Atiquizaya, El Salvador(frente a Unidad de Salud)</p>
           </aside>
         </section>
         {/* appointment section */}
         <section>
-          <button className="bg-brand-darker text-white rounded-md p-2  hover:bg-brand-dark ">
+          <button className="bg-brand-darker text-white rounded-md p-2  md:w-20 hover:bg-brand-dark ">
             <Link href="./citas">
               Agende Hoy!
             </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
         </ul>
       </nav>
       
-      <nav className="mobile bg-black flex md:hidden">
+      <nav className="mobile bg-gray-200 flex md:hidden">
         <h1>mobile</h1>
       </nav>
     </>
