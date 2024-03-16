@@ -5,7 +5,7 @@ import { Schema,model,models } from "mongoose";
 
 // function to create new user Schema 
 
-const DentitasSchema = new Schema (
+const DentistaSchema = new Schema (
   {
     firstName: {type:String, required:true, unique:false},
     middleName:{type:String, required:true,unique:false},
@@ -22,7 +22,8 @@ const DentitasSchema = new Schema (
   );
 
 // user models check if already exits if not it creates it  to then  export as Dentista
-const Dentista = models.Dentista || model("Dentita", DentitasSchema);
+const Dentista = models.Dentista || model("Dentistas", DentistaSchema);
+
 export default Dentista;  // export  userSchema  as Dentista
 
 
