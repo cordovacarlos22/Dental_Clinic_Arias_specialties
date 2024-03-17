@@ -36,12 +36,14 @@ const Navbar = () => {
   const path = usePathname();
   return (
     <>
-      <nav className="hidden md:flex   h-40  items-center   justify-around   relative">
+      <nav className="hidden md:flex    bg-yellow-200 h-40  items-center   justify-around   relative">
         {/* logo section */}
-        <section className="logo-container mx-2  md:w-32 lg:w-60">
-          <Link href="/">
-            <Image className=" w-64 h-64 " src={logo} alt="clinica arias logo" />
-          </Link>
+        <section className="flex ml-4">
+          <Image className="size-16 " src={logo} alt="red cross"></Image>
+          <aside className="flex flex-col  ml-2 justify-center font-extrabold ">
+            <p className="text-brand-darker md:text-md lg:text-2xl">Clinica Arias</p>
+            <p className="text-brand-dark md:text-md font-bold lg:text-lg ">Especialidades Dentales </p>
+          </aside>
         </section>
         {/* emergencies section */}
         <section className="flex gap-2  item-center">
