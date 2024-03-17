@@ -126,10 +126,7 @@ const AddDentista = () => {
           /> */}
 
 
-          <button
-            type='submit'
-            className=" w-full text-center py-3 rounded bg-green text-black hover:bg-green-100 focus:outline-none my-1"
-          >Agregar Doctor</button>
+          <button type="submit" class="w-full text-white bg-brand-darker hover:bg-brand-dark focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar Doctor</button>
 
 
         </form>
