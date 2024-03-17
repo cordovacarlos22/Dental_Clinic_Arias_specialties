@@ -15,11 +15,30 @@ export const GET = async () => {
   try {
     await connect();   //  is going to connect to db
     // will storage all dentistas find in the dentistas variables
-    const dentistas = await  Dentista.find();
+    const dentistas = await Dentista.find();
 
-    return new NextResponse(JSON.stringify(dentistas), { status: 200 }); 
+    return new NextResponse(JSON.stringify(dentistas), { status: 200 });
   } catch (error) {
-      return new NextResponse("Error in  fetching dentistas" + error, {status:500});
+    return new NextResponse("Error in  fetching dentistas" + error, { status: 500 });
+  }
+};
+
+
+// POST METHOD TO ADD NEW DOCTOR TO DB
+
+export async function POST(req, res) {
+
+  let { firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin } = await req.json();
+  if (!firstName || !middleName || !firstLastName || !secondLastName || !userName || !email || !password) {
+    return NextResponse.json(
+      { error: "missing a require fill", ok: false },
+      { status: 400 }
+    )
+  }else {
+    return NextResponse.json(
+      {res:'data send sucessfuly',ok:true},
+      {status:201}
+    )
   }
 };
 
