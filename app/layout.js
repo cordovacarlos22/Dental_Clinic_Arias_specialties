@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar"; // navbar component
 import "./globals.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-export const metadata =  {
-  
+export const metadata = {
+
 
   metadataBase: new URL('http://localhost:3000'),
   title: " Especialidades Dentales - Clinica Arias ",
@@ -32,10 +32,10 @@ export default function RootLayout({ children }) {
     <html lang="es">
 
       <body>
-        <Navbar/>
+        <Navbar />
         {children}
-        <SpeedInsights/>
-        </body>
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
