@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 import connect from "@/app/lib/bd";
 
 // import Dentista model Schema
-import Dentista from "@/app/lib/models/dentistas.model";
+import Dentista from "@/app/models/dentistas.model";
 
 
 // gets all dentistas from DB 
@@ -26,19 +26,29 @@ export const GET = async () => {
 
 // POST METHOD TO ADD NEW DOCTOR TO DB
 
-export async function POST(req, res) {
+export const POST = async (req,res) => {
+  try {
+     
+      await connect();
+    const body = await req.json();
 
-  let { firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin } = await req.json();
-  if (!firstName || !middleName || !firstLastName || !secondLastName || !userName || !email || !password) {
-    return NextResponse.json(
-      { error: "missing a require fill", ok: false },
-      { status: 400 }
-    )
-  }else {
-    return NextResponse.json(
-      {res:'data send sucessfuly',ok:true},
-      {status:201}
-    )
+    const newUser = await Dentista.create(body);
+    await newUser.save(); 
+
+    return new NextResponse(
+      JSON.stringify({ message: "User is created", user: newUser }),
+      { status: 201 }
+    );
+  } catch (error) {
+    return new NextResponse(
+      JSON.stringify({
+        message: "Error in creating user",
+        error,
+      }),
+      {
+        status: 500,
+      }
+    );
   }
 };
 
