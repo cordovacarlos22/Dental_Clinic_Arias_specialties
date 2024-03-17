@@ -36,16 +36,16 @@ const Navbar = () => {
   const path = usePathname();
   return (
     <>
-      <nav className="hidden md:flex  gap-1 h-40  items-center  justify-between mx-8 m-auto relative">
+      <nav className="hidden md:flex   h-40  items-center   justify-around   relative">
         {/* logo section */}
-        <section className="logo-container  flex justify-start ">
+        <section className="logo-container mx-2  md:w-32 lg:w-60">
           <Link href="/">
-            <Image className="md:size-36 lg:size-52" src={logo} alt="clinica arias logo" />
+            <Image className=" w-64 h-64 " src={logo} alt="clinica arias logo" />
           </Link>
         </section>
         {/* emergencies section */}
         <section className="flex gap-2  item-center">
-          <Image className=" md:size-8 lg:size-12" src={cruzRoja} alt="red cross"></Image>
+          <Image className="md:w-6 lg:w-10" src={cruzRoja} alt="red cross"></Image>
           <aside className="inline flex-col items-center font-extrabold ">
             <p className="text-brand-darker md:text-xs lg:text-lg">+503 7322-2299</p>
             <p className="text-brand-dark md:text-xs font-bold ">DISPONIBLES PARA EMERGENCIA</p>
@@ -60,14 +60,14 @@ const Navbar = () => {
           </aside>
         </section>
         {/* appointment section */}
-        <section>
-          <button className="bg-brand-darker text-white rounded-md p-2  md:w-28 hover:bg-brand-dark ">
+        <section className="mx-2">
+          <button className="bg-brand-darker text-white rounded-md p-2  md:text-sm md:w-16 lg:text-lg lg:w-32 hover:bg-brand-dark ">
             <Link href="./citas">
               Agende Hoy!
             </Link>
           </button>
         </section>
-        <section className="flex gap-5 absolute bottom-2 text-lg right-28">
+        <section className="flex gap-5 absolute bottom-2 lg:text-lg md:text-sm right-28">
           {navLinks.map((e) => (
             <ul className="" key={e.name}>
               <li className="hover:bg-brand-light px-2 hover:rounded-md">
