@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const fecthDentistas = async () => {
   let URL = process.env.URL //  GLOBAL URL
-  let dentistas = await fetch(`${URL}api/dentistas`);
+  let dentistas = await fetch(`https://dental-clinic-arias-specialties.vercel.app/api/dentistas`);
   dentistas = await dentistas.json();
   console.log(
     dentistas, "Dentistas"
