@@ -36,11 +36,11 @@ const Navbar = () => {
   const path = usePathname();
   return (
     <>
-      <header className=" flex    bg-yellow-200 h-40  items-center   justify-around   relative">
+      <header className=" hidden md:flex h-40  items-center   justify-around ">
         {/* logo section */}
         <section className=" logo-container flex ml-4">
           <Link className="flex" href="/">
-            <Image className="size-16 " src={logo} alt="red cross"></Image>
+            <Image className="size-18 " src={logo} alt="red cross"></Image>
             <aside className="flex flex-col  ml-2 justify-center font-extrabold ">
               <p className="text-brand-darker md:text-md lg:text-2xl">Clinica Arias</p>
               <p className="text-brand-dark md:text-md font-bold lg:text-lg ">Especialidades Dentales </p>
@@ -48,9 +48,9 @@ const Navbar = () => {
           </Link>
         </section>
         <section className="right-container flex flex-col gap-6">
-          <section className="right-top-container  justify-around flex">
+          <section className="right-top-container flex gap-4  ">
             {/* emergencies section */}
-            <section className=" flex gap-2  item-center">
+            <section className=" flex   item-center">
               <Image className="md:w-6 lg:w-10" src={cruzRoja} alt="red cross"></Image>
               <aside className="inline flex-col items-center font-extrabold ">
                 <p className="text-brand-darker md:text-xs lg:text-lg">+503 7322-2299</p>
@@ -59,7 +59,7 @@ const Navbar = () => {
             </section>
             {/* location section */}
             <section className="flex gap-2  item-center">
-              <Image src={mapLogo} alt="map icon"></Image>
+              <Image className="size-10"  src={mapLogo} alt="map icon"></Image>
               <aside className="inline flex-col items-center font-extrabold ">
                 <p className=" text-brand-darker md:text-xs lg:text-lg"> Final 5a Calle Poniente #14 Colonia San Manuel,</p>
                 <p className="text-brand-dark md:text-xs lg:text">Atiquizaya, El Salvador(frente a Unidad de Salud)</p>
@@ -67,9 +67,9 @@ const Navbar = () => {
             </section>
             {/* appointment section */}
             <section className="mx-2">
-              <button className="bg-brand-darker text-white rounded-md p-2  md:text-sm md:w-16 lg:text-lg lg:w-32 hover:bg-brand-dark ">
+              <button className="bg-brand-darker text-white rounded-md p-2  md:text-sm md:w-16 lg:text-lg lg:w-36 hover:bg-brand-dark ">
                 <Link href="./citas">
-                  Agende Hoy!
+                  <span className="lg:text-xl md:text-sm">Agende Hoy!</span>
                 </Link>
               </button>
             </section>
