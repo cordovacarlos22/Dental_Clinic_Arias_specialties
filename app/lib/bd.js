@@ -27,7 +27,7 @@ export const connect = async ()=>{
     // establish connection to db 
     mongoose.connect(MONGODB_URL,{
       dbName:"Clinica_Arias_Esperialidades_Dentales", // sets DB name
-      bufferCommands: false  // configuration
+      // bufferCommands: false  // configuration
     });
     console.log("Connected to DB");
   } catch (error) {
