@@ -24,13 +24,13 @@ const AddDentista = () => {
   const addNewDentistaHandler = async (e) => {
     e.preventDefault()
 
-    console.log(firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin,specialties);
+    console.log(firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin, specialties);
 
 
 
     let addDoctor = await fetch('/api/dentistas', {
       method: "POST",
-      body: JSON.stringify({ firstName, middleName, firstLastName, secondLastName, userName, email, password,avatar, admin,specialties }),
+      body: JSON.stringify({ firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin, specialties }),
     });
     addDoctor = await addDoctor.json();
 
@@ -117,23 +117,35 @@ const AddDentista = () => {
             placeholder="avatar"
             required
           />
-          <input
-            type="text"
-            className="block border border-grey-light w-full p-3 rounded mb-4"
-            onChange={(e) => setAdmin(e.target.value)}
-            value={admin}
-            placeholder="admin (true o false)"
-            required
-          />
+          
 
           <input
             type="text"
             className="block border border-grey-light w-full p-3 rounded mb-4"
             onChange={(e) => setSpecialties(e.target.value)}
             value={specialties}
-            placeholder="Ingrese los Especialidades Medicas"
+            placeholder="Ingrese Especialidad Medica"
             required
           />
+
+          <label
+            htmlFor="admin"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Admistrador
+          </label>
+
+          <select
+            name="admin"
+            id="admin"
+            defaultValue={admin}
+            onChange={(e) => setAdmin(e.target.value)}
+            className="bg-gray-50 border border-gray-300 mb-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option value="">--Selectionar Una Opcion--</option>
+            <option value={false}>No</option>
+            <option value={true}> Si</option>
+          </select>
 
 
           <button type="submit" className="w-full text-white bg-brand-darker hover:bg-brand-dark focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar Doctor</button>
