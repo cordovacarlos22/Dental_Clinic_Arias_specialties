@@ -36,7 +36,7 @@ const Navbar = () => {
   const path = usePathname();
   return (
     <>
-      <header className=" hidden md:flex h-40  items-center   justify-around ">
+      <header className=" hidden md:flex  md:flex-1 h-40  items-center   justify-around ">
         {/* logo section */}
         <section className=" logo-container flex ml-4">
           <Link className="flex" href="/">
@@ -50,12 +50,12 @@ const Navbar = () => {
         <section className="right-container flex flex-col gap-6">
           <section className="right-top-container flex gap-4  ">
             {/* emergencies section */}
-            <section className=" flex   item-center">
-              <Image className="md:w-6 lg:w-10" src={cruzRoja} alt="red cross"></Image>
-              <aside className="inline flex-col items-center font-extrabold ">
-                <p className="text-brand-darker md:text-xs lg:text-lg">+503 7322-2299</p>
-                <p className="text-brand-dark md:text-xs font-bold ">DISPONIBLES PARA EMERGENCIA</p>
-              </aside>
+            <section className=" flex  flex-col  item-center">
+             
+                <p className="text-brand-darker  md:text-xs lg:text-2xl">+503 7322-2299</p>
+              
+                <p className="text-brand-dark md:text-xs font-bold  gap-2  inline-flex">  <Image className="size-4" src={cruzRoja} alt="red cross"></Image>DISPONIBLES PARA EMERGENCIA</p>
+             
             </section>
             {/* location section */}
             <section className="flex gap-2  item-center">
