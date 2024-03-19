@@ -4,7 +4,9 @@ import logo from "../public/logo.svg";
 import cruzRoja from "../public/cross.svg";
 import mapLogo from "../public/map logo.svg";
 import hamburgerMenu from "../public/menu.svg"
-
+import phone from "../public/phone.svg";
+import location from "../public/location.svg";
+import calendar from "../public/calendar.svg";
 
 
 const Navbar = () => {
@@ -32,7 +34,7 @@ const Navbar = () => {
     },
 
   ]
-  
+
   return (
     <>
       <header className=" hidden md:flex  md:flex-1 h-40  items-center   justify-around ">
@@ -92,22 +94,39 @@ const Navbar = () => {
 
       <nav className="mobile w-screen  flex flex-col md:hidden">
         <section className="mobile-top bg-gray-200 w-full flex justify-center items-center ">
-          <Link href="/citas" >  
-            <p className="text-orange-400   leading-4 text-[0.5rem]  font-bold"> <span className="text-red-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
+          <Link href="/citas" >
+            <p className="text-orange-400   text-xs  font-bold"> <span className="text-red-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
           </Link>
         </section>
         <section className="mobile-middle flex    w-full  justify-between px-4">
-          <Image priority={false}  src={logo} className="size-32 m-0 p-0" alt="logo"></Image>
-                <aside className="flex justify-start items-start pt-4">
-                  <button>
-                    <Image src={hamburgerMenu} alt="hamburger menu"></Image>
-                  </button>
-                </aside>
+          <Image priority={false} src={logo} className="size-32 m-0 p-0" alt="logo"></Image>
+          <aside className="flex pt-4">
+            <button>
+              <Image src={hamburgerMenu} alt="hamburger menu"></Image>
+            </button>
+          </aside>
         </section>
         <section className="mobile-bottom flex w-full">
-            <aside className="bg-gray-200 flex-1  border-r-2 border-black">1</aside>
-            <aside className="bg-gray-200 flex-1  ">2</aside>
-            <aside className="bg-blue-400 flex-1 ">3</aside>
+          <aside className="bg-gray-200 flex-1  flex flex-col  items-center p-2 border-r border-brand-dark">
+            <Image priority={false} src={phone} alt="phone" ></Image>
+            <p className="text-xs text-brand-dark">503 7322-2299</p>
+          </aside>
+          <aside className="bg-gray-200 flex-1  ">
+            <aside className="bg-gray-200 flex-1  flex flex-col  items-center p-2 ">
+              <Image priority={false} src={location} alt="phone" ></Image>
+              <Link className="m-auto" href="https://maps.app.goo.gl/8ufftsE2aHmuYtHP7" target="_black" referrerPolicy="same-origen">
+                
+                <p className="text-xs text-brand-dark">mapa</p>
+              </Link>
+              
+            </aside>
+          </aside>
+          <aside className="bg-brand-dark flex-1 ">
+            <aside className="bg-brand-darker flex-1  flex flex-col  items-center p-2 ">
+              <Image priority={false} src={calendar} alt="phone" ></Image>
+              <p className="text-xs text-white">Agendar Cita</p>
+            </aside>
+          </aside>
         </section>
       </nav>
     </>
