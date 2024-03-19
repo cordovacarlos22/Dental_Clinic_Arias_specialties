@@ -40,10 +40,10 @@ const Navbar = () => {
         <section className=" logo-container flex ml-4">
           <Link className="flex" href="/">
             <Image className="size-18 " src={logo} alt="red cross"></Image>
-            <aside className="flex flex-col  ml-2 justify-center font-extrabold ">
+            {/* <aside className="flex flex-col  ml-2 justify-center font-extrabold ">
               <p className="text-brand-darker md:text-md lg:text-2xl">Clinica Arias</p>
               <p className="text-brand-dark md:text-md font-bold lg:text-lg ">Especialidades Dentales </p>
-            </aside>
+            </aside> */}
           </Link>
         </section>
         <section className="right-container flex flex-col gap-6">
@@ -91,7 +91,12 @@ const Navbar = () => {
       </header>
 
       <nav className="mobile bg-gray-200 flex md:hidden">
-        <h1>mobile</h1>
+        <section className="mobile-top">
+
+        </section>
+        <section className="mobile-bottom">
+
+        </section>
       </nav>
     </>
   )
