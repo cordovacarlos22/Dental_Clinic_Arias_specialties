@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/logo.svg";
-import cruzRoja from "../public/CRUZ ROJA.svg";
+import cruzRoja from "../public/cross.svg";
 import mapLogo from "../public/map logo.svg";
-
+import hamburgerMenu from "../public/menu.svg"
 
 
 
@@ -51,14 +51,14 @@ const Navbar = () => {
             {/* emergencies section */}
             <section className=" flex  flex-col  item-center">
 
-              <p className="text-brand-darker  md:text-xs lg:text-2xl">+503 7322-2299</p>
+              <p className="text-brand-darker  md:text-xs lg:text-2xl">503 7322-2299</p>
 
               <p className="text-brand-dark md:text-xs font-bold  gap-2  inline-flex">  <Image className="size-4" src={cruzRoja} alt="red cross"></Image>DISPONIBLES PARA EMERGENCIA</p>
 
             </section>
             {/* location section */}
             <section className="flex gap-2  item-center">
-              <Image className="size-10" src={mapLogo} alt="map icon"></Image>
+              <Image className="size-6" src={mapLogo} alt="map icon"></Image>
               <aside className="inline flex-col items-center font-extrabold ">
                 <p className=" text-brand-darker md:text-xs lg:text-lg"> Final 5a Calle Poniente #14 Colonia San Manuel,</p>
                 <p className="text-brand-dark md:text-xs lg:text">Atiquizaya, El Salvador(frente a Unidad de Salud)</p>
@@ -90,12 +90,24 @@ const Navbar = () => {
         </section>
       </header>
 
-      <nav className="mobile bg-gray-200 flex md:hidden">
-        <section className="mobile-top">
-
+      <nav className="mobile w-screen  flex flex-col md:hidden">
+        <section className="mobile-top bg-gray-200 w-full flex justify-center items-center ">
+          <Link href="/citas" >  
+            <p className="text-orange-400   leading-4 text-[0.5rem]  font-bold"> <span className="text-red-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
+          </Link>
         </section>
-        <section className="mobile-bottom">
-
+        <section className="mobile-middle flex    w-full  justify-between px-4">
+          <Image priority={false}  src={logo} className="size-32 m-0 p-0" alt="logo"></Image>
+                <aside className="flex justify-start items-start pt-4">
+                  <button>
+                    <Image src={hamburgerMenu} alt="hamburger menu"></Image>
+                  </button>
+                </aside>
+        </section>
+        <section className="mobile-bottom flex w-full">
+            <aside className="bg-gray-200 flex-1  border-r-2 border-black">1</aside>
+            <aside className="bg-gray-200 flex-1  ">2</aside>
+            <aside className="bg-blue-400 flex-1 ">3</aside>
         </section>
       </nav>
     </>
