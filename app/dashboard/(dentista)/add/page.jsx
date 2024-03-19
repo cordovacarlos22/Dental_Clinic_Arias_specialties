@@ -16,20 +16,21 @@ const AddDentista = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [avatar, setAvatar] = useState("");
-  const [admin, setAdmin] = useState(false)
+  const [admin, setAdmin] = useState(false);
+  const [specialties, setSpecialties] = useState("");
 
 
   // handles add new doctor to DB
   const addNewDentistaHandler = async (e) => {
     e.preventDefault()
 
-    console.log(firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin);
+    console.log(firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin,specialties);
 
 
 
     let addDoctor = await fetch('/api/dentistas', {
       method: "POST",
-      body: JSON.stringify({ firstName, middleName, firstLastName, secondLastName, userName, email, password })
+      body: JSON.stringify({ firstName, middleName, firstLastName, secondLastName, userName, email, password,avatar, admin,specialties }),
     });
     addDoctor = await addDoctor.json();
 
@@ -108,7 +109,7 @@ const AddDentista = () => {
             required
             autoComplete='current-password'
           />
-          {/* <input
+          <input
             type="text"
             className="block border border-grey-light w-full p-3 rounded mb-4"
             onChange={(e) => setAvatar(e.target.value)}
@@ -123,10 +124,19 @@ const AddDentista = () => {
             value={admin}
             placeholder="admin (true o false)"
             required
-          /> */}
+          />
+
+          <input
+            type="text"
+            className="block border border-grey-light w-full p-3 rounded mb-4"
+            onChange={(e) => setSpecialties(e.target.value)}
+            value={specialties}
+            placeholder="Ingrese los Especialidades Medicas"
+            required
+          />
 
 
-          <button type="submit" class="w-full text-white bg-brand-darker hover:bg-brand-dark focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar Doctor</button>
+          <button type="submit" className="w-full text-white bg-brand-darker hover:bg-brand-dark focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar Doctor</button>
 
 
         </form>
