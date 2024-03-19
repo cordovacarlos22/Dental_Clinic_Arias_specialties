@@ -51,15 +51,15 @@ const Navbar = () => {
           <section className="right-top-container flex gap-4  ">
             {/* emergencies section */}
             <section className=" flex  flex-col  item-center">
-             
-                <p className="text-brand-darker  md:text-xs lg:text-2xl">+503 7322-2299</p>
-              
-                <p className="text-brand-dark md:text-xs font-bold  gap-2  inline-flex">  <Image className="size-4" src={cruzRoja} alt="red cross"></Image>DISPONIBLES PARA EMERGENCIA</p>
-             
+
+              <p className="text-brand-darker  md:text-xs lg:text-2xl">+503 7322-2299</p>
+
+              <p className="text-brand-dark md:text-xs font-bold  gap-2  inline-flex">  <Image className="size-4" src={cruzRoja} alt="red cross"></Image>DISPONIBLES PARA EMERGENCIA</p>
+
             </section>
             {/* location section */}
             <section className="flex gap-2  item-center">
-              <Image className="size-10"  src={mapLogo} alt="map icon"></Image>
+              <Image className="size-10" src={mapLogo} alt="map icon"></Image>
               <aside className="inline flex-col items-center font-extrabold ">
                 <p className=" text-brand-darker md:text-xs lg:text-lg"> Final 5a Calle Poniente #14 Colonia San Manuel,</p>
                 <p className="text-brand-dark md:text-xs lg:text">Atiquizaya, El Salvador(frente a Unidad de Salud)</p>
@@ -68,7 +68,7 @@ const Navbar = () => {
             {/* appointment section */}
             <section className="mx-2">
               <button className="bg-brand-darker text-white rounded-md p-2  md:text-sm md:w-16 lg:text-lg lg:w-36 hover:bg-brand-dark ">
-                <Link href="./citas">
+                <Link href="/citas">
                   <span className="lg:text-xl md:text-sm">Agende Hoy!</span>
                 </Link>
               </button>
@@ -87,7 +87,7 @@ const Navbar = () => {
               ))}
             </nav>
           </section>
-         
+
         </section>
       </header>
 
