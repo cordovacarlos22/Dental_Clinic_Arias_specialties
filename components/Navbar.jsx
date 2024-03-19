@@ -1,10 +1,9 @@
-'use client'
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/logo.svg";
 import cruzRoja from "../public/CRUZ ROJA.svg";
 import mapLogo from "../public/map logo.svg";
-import { usePathname } from "next/navigation";
+
 
 
 
@@ -33,7 +32,7 @@ const Navbar = () => {
     },
 
   ]
-  const path = usePathname();
+  
   return (
     <>
       <header className=" hidden md:flex  md:flex-1 h-40  items-center   justify-around ">
