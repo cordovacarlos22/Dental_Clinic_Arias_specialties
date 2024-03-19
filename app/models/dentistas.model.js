@@ -15,7 +15,8 @@ const DentistaSchema = new Schema (
     email:{type:String,required:true,unique:true},
     password:{type:String,required:true},
     avatar:{type:String},
-    admin:{type:Boolean,default:false}
+    admin:{type:Boolean,default:false},
+    specialties: { type: String, required: true },
   },
   {
     timestamps:true
