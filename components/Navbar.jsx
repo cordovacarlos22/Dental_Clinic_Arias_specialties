@@ -9,7 +9,8 @@ import phone from "../public/phone.svg";
 import location from "../public/location.svg";
 import calendar from "../public/calendar.svg";
 import { useState } from "react";
-
+import Transitions from "./Transitions";
+import { easeInOut, motion } from "framer-motion";
 
 const Navbar = () => {
 
@@ -44,7 +45,7 @@ const Navbar = () => {
  function named `setToggle` to update the value of `toggle`. */
   const [toggle, setToggle] = useState(false);
 
-
+  
 
 
   return (
@@ -92,17 +93,17 @@ const Navbar = () => {
           <section className="right-bottom0container">
             {/* /* The code snippet you provided is rendering a navigation bar with a list of navigation
            links based on the `navLinks` array. Here's a breakdown of what the code is doing: */ }
-            <nav className="flex gap-5  lg:text-lg md:text-sm ">
+            <na className="flex gap-5  lg:text-lg md:text-sm ">
               {navLinks.map((e) => (
                 <ul className="" key={e.name}>
                   <li className="hover:bg-brand-light px-2 hover:rounded-md">
-                    <Link href={e.path}>
+                    <Link  href={e.path}>
                       {e.name}
                     </Link>
                   </li>
                 </ul>
               ))}
-            </nav>
+            </na>
           </section>
 
         </section>
@@ -132,19 +133,23 @@ const Navbar = () => {
          {/* /* This code snippet is using a conditional rendering technique in React. The expression
          `{toggle && (...)}` is checking the value of the `toggle` state variable. If `toggle` is
          `true`, the code inside the curly braces will be rendered. */ }
+         
           {toggle && (
-            <nav className=" pb-4 ">
-              {navLinks.map((e) => (
-                <ul className="" key={e.name}>
-                  <li className="hover:bg-brand-light px-2 hover:rounded-md">
-                    <Link href={e.path}>
-                      {e.name}
-                    </Link>
-                  </li>
-                </ul>
-              ))}
-            </nav>
+            <Transitions>
+              <nav className=" pb-4 ">
+                {navLinks.map((e) => (
+                  <ul className="" key={e.name}>
+                    <li   className="hover:bg-brand-light px-2 hover:rounded-md">
+                      <Link onClick={() => setToggle(!toggle)}  href={e.path}>
+                        {e.name}
+                      </Link>
+                    </li>
+                  </ul>
+                ))}
+              </nav>
+            </Transitions>
           )}
+          
 
         </section>
         <section className="mobile-bottom flex w-full">
