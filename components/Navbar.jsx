@@ -157,9 +157,9 @@ const Navbar = () => {
           </section>
           <section className="mobile-bottom flex w-full">
             <aside className="bg-gray-200 flex-1  flex flex-col  items-center p-2 border-r border-brand-dark">
-              <Link href="tel:+503-7322-2299" className="flex flex-col justify-center">
-                <Image className="mx-o my-auto" priority={false} src={phone} alt="phone" ></Image>
-                <p className="text-xs text-brand-dark">Llama Ahora</p>
+              <Link href="tel:+503-7322-2299" className="flex flex-col justify-center items-center">
+                <Image className="" priority={false} src={phone} alt="phone" ></Image>
+                <p className="text-xs text-brand-dark">Llamar Ahora</p>
               </Link>
 
 
