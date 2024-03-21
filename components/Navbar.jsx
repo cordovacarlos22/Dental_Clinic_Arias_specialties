@@ -94,7 +94,7 @@ const Navbar = () => {
             <section className="right-bottom0container">
               {/* /* The code snippet you provided is rendering a navigation bar with a list of navigation
            links based on the `navLinks` array. Here's a breakdown of what the code is doing: */ }
-              <na className="flex gap-5  lg:text-lg md:text-sm ">
+              <nav className="flex gap-5  lg:text-lg md:text-sm ">
                 {navLinks.map((e) => (
                   <ul className="" key={e.name}>
                     <li className="hover:bg-brand-light px-2 hover:rounded-md">
@@ -104,7 +104,7 @@ const Navbar = () => {
                     </li>
                   </ul>
                 ))}
-              </na>
+              </nav>
             </section>
 
           </section>
