@@ -113,11 +113,11 @@ const Navbar = () => {
       website. It includes sections for displaying emergency contact information, logo, navigation
       links, phone number, location map link, and appointment scheduling button.  */}
       <header className="mobile w-screen   md:hidden">
+        <Link href="/citas" >
         <section className="mobile-top bg-gray-200 w-full flex justify-center items-center ">
-          <Link href="/citas" >
             <p className="text-orange-400   text-xs  font-bold"> <span className="text-red-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
-          </Link>
         </section>
+        </Link>
         <section className="mobile-middle  flex flex-col  w-full  justify-between px-4">
           <aside className="flex justify-around">
             <Image priority={true} src={logo} className="size-32 m-0 p-0" alt="logo"></Image>
@@ -154,13 +154,17 @@ const Navbar = () => {
         </section>
         <section className="mobile-bottom flex w-full">
           <aside className="bg-gray-200 flex-1  flex flex-col  items-center p-2 border-r border-brand-dark">
-            <Image priority={false} src={phone} alt="phone" ></Image>
-            <p className="text-xs text-brand-dark">503 7322-2299</p>
+            <Link href="tel:+503-7322-2299" className="flex flex-col justify-center">
+              <Image className="my-0 mx-auto" priority={false} src={phone} alt="phone" ></Image>
+              <p className="text-xs text-brand-dark">Llama Ahora</p>
+             </Link>
+           
+            
           </aside>
           <aside className="bg-gray-200 flex-1  ">
             <aside className="bg-gray-200 flex-1  flex flex-col  items-center p-2 ">
-              <Image priority={false} src={location} alt="phone" ></Image>
-              <Link className="m-auto" href="https://maps.app.goo.gl/8ufftsE2aHmuYtHP7" target="_black" referrerPolicy="same-origen">
+              <Link className=" flex flex-col justify-center" href="https://maps.app.goo.gl/8ufftsE2aHmuYtHP7" target="_black" referrerPolicy="same-origen">
+              <Image className="my-0 mx-auto" priority={false} src={location} alt="phone" ></Image>
                 <p className="text-xs text-brand-dark">mapa</p>
               </Link>
 
@@ -168,9 +172,11 @@ const Navbar = () => {
           </aside>
           <aside className="bg-brand-dark flex-1 ">
             <aside className="bg-brand-darker flex-1  flex flex-col  items-center p-2 ">
-              <Image priority={false} src={calendar} alt="phone" ></Image>
-              <Link href='/citas'>
-                <p className="text-xs text-white">Agendar Cita</p></Link>
+              <Link className=" flex flex-col justify-center" href='/citas'>
+                <Image className="my-0 mx-auto" priority={false} src={calendar} alt="phone" ></Image>
+             
+                <p className="text-xs text-white">Agendar Cita</p>
+             </Link>
             </aside>
           </aside>
         </section>
