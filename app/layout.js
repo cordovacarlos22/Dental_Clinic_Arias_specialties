@@ -31,9 +31,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
 
-      <body>
+      <body className="w-screen h-screen">
         <Navbar />
-        {children}
+        <main>
+          {children}
+        </main>
         <SpeedInsights />
       </body>
     </html>
