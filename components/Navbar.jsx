@@ -116,7 +116,7 @@ const Navbar = () => {
         <header className="mobile w-screen   md:hidden">
           <Link href="/citas" >
             <section className="mobile-top bg-gray-200 w-full flex justify-center items-center ">
-              <p className="text-orange-400   text-xs  font-bold"> <span className="text-red-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
+              <p className="text-orange-400   text-xs  font-bold"> <span className="text-orange-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
             </section>
           </Link>
           <section className="mobile-middle  flex flex-col  w-full  justify-between px-4">
