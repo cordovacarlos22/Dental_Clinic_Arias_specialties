@@ -97,7 +97,7 @@ const Navbar = () => {
               <nav className="flex gap-5  lg:text-lg md:text-sm ">
                 {navLinks.map((e) => (
                   <ul className="" key={e.name}>
-                    <li className="hover:bg-brand-light px-2 hover:rounded-md">
+                    <li className="hover:text-brand-dark px-2 ">
                       <Link href={e.path}>
                         {e.name}
                       </Link>
@@ -141,8 +141,8 @@ const Navbar = () => {
               >
                 <nav className=" pb-4 ">
                   {navLinks.map((e) => (
-                    <ul className="" key={e.name}>
-                      <li className="hover:bg-brand-light px-2 hover:rounded-md">
+                    <ul className="w-28 " key={e.name}>
+                      <li className="hover:text-brand-dark px-2  ">
                         <Link onClick={() => setToggle(!toggle)} href={e.path}>
                           {e.name}
                         </Link>
