@@ -158,14 +158,14 @@ const Navbar = () => {
           <section className="mobile-bottom flex w-full">
             <aside className="bg-gray-200 flex-1  flex flex-col  items-center p-2 border-r border-brand-dark">
               <Link href="tel:+503-7322-2299" className="flex flex-col justify-center items-center">
-                <Image className=" size-8 " priority={false} src={phone} alt="phone" ></Image>
+                <Image className=" size-6 " priority={false} src={phone} alt="phone" ></Image>
                 <p className="text-sm text-brand-dark ">Llamar Ahora</p>
               </Link>
             </aside>
             <aside className="bg-gray-200 flex-1  ">
               <aside className="bg-gray-200 flex-1  flex flex-col  items-center p-2 ">
                 <Link className=" flex flex-col justify-center" href="https://maps.app.goo.gl/8ufftsE2aHmuYtHP7" target="_black" referrerPolicy="same-origen">
-                  <Image className="my-0 mx-auto size-8" priority={false} src={location} alt="phone" ></Image>
+                  <Image className="my-0 mx-auto size-6" priority={false} src={location} alt="phone" ></Image>
                   <p className="text-sm text-brand-dark">Mapa</p>
                 </Link>
 
@@ -174,7 +174,7 @@ const Navbar = () => {
             <aside className="bg-brand-dark flex-1 ">
               <aside className="bg-brand-darker flex-1  flex flex-col  items-center p-2 ">
                 <Link className=" flex flex-col justify-center" href='/citas'>
-                  <Image className="my-0 mx-auto size-8" priority={false} src={calendar} alt="phone" ></Image>
+                  <Image className="my-0 mx-auto size-6" priority={false} src={calendar} alt="phone" ></Image>
 
                   <p className="text-sm text-white">Agendar Cita</p>
                 </Link>
