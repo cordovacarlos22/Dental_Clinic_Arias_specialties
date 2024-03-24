@@ -6,7 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata = {
 
 
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL(`${process.env.URL} `),
   title: " Especialidades Dentales - Clinica Arias ",
   description: "Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.",
   url: 'http://localhost:3000',
