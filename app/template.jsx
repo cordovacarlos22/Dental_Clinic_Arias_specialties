@@ -10,8 +10,8 @@ const AnimationBottomToTop = ({ children }) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
     >
-      <Navbar/>
-      {children}
+      {/* <Navbar/> */}
+     {children}
     </motion.div>
   )
 }
