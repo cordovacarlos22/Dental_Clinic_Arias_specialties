@@ -43,7 +43,7 @@ const AddDentista = () => {
 
 
   return (
-    <div className="bg-grey-lighter  flex flex-col  mt-56 md:mt-36 bg-red-500 w-screen min-h-[calc(100vh-201px)]   lg:min-h-[calc(100vh-160px)] z-0  p-6  ">
+    <div className="bg-grey-lighter  flex flex-col  mt-56 md:mt-36 bg-red-500 w-screen  z-0  p-6  ">
       <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
         <form onSubmit={addNewDentistaHandler} className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
           <h1 className="mb-8 text-3xl text-center text-brand-darker">Agregar un Doctor</h1>

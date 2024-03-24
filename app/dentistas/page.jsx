@@ -22,7 +22,7 @@ const Dentistas = async () => {
   let element = await fecthDentistas();
 
   return (
-    <div className="mt-56 md:mt-36 bg-red-500 w-screen  min-h-[calc(100vh-201px)]  lg:min-h-[calc(100vh-160px)] z-0  p-6 ">
+    <div className="mt-56 md:mt-36 bg-red-500 w-screen  z-0  p-6 ">
       {element.map((d) => (
         <>
           <Link href={`/dentistas/${d.firstName}`}>
