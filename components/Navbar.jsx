@@ -10,7 +10,7 @@ import location from "../public/location.svg";
 import calendar from "../public/calendar.svg";
 import { useState } from "react";
 import AnimationLeftToRight from "@/components/AnimationLeftToRight";
-import AnimationRightToLeft from "@/components/AnimationRightToLeft";
+
 
 const Navbar = () => {
 
@@ -50,10 +50,10 @@ const Navbar = () => {
 
   return (
     <>
-      <AnimationRightToLeft>
+      <AnimationLeftToRight>
         {/* The code you provided is defining the desktop version of the navigation bar for a website
       using React. Let's break down the structure and functionality of this code snippet: */ }
-        <header className=" hidden   md:block  md:m-2  md:flex-1  lg:flex min-h-40  items-center   lg:justify-around ">
+        <header className=" fixed  top-0 z-10 left-0 right-0 hidden   mx-2 p-2 md:block   md:mx-auto bg-white  md:flex-1  lg:flex lg:mx-auto  min-h-40  items-center   lg:justify-around ">
           {/* logo section */}
           <section className=" logo-container flex justify-start  lg:ml-4 md:m-2">
             <Link className="flex" href="/">
@@ -113,7 +113,7 @@ const Navbar = () => {
         {/* The code you provided is defining a responsive mobile version of the navigation bar for a
       website. It includes sections for displaying emergency contact information, logo, navigation
       links, phone number, location map link, and appointment scheduling button.  */}
-        <header className="mobile w-screen   md:hidden">
+        <header className="mobile  fixed right-0 left-0 top-0  bg-white mx-auto md:hidden">
           <Link href="/citas" >
             <section className="mobile-top bg-gray-200 w-full flex justify-center items-center ">
               <p className="text-orange-400   text-xs  font-bold"> <span className="text-orange-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
@@ -139,7 +139,7 @@ const Navbar = () => {
               <AnimationLeftToRight
 
               >
-                <nav className=" pb-4 ">
+                <nav className=" pb-4  ">
                   {navLinks.map((e) => (
                     <ul className="w-40 " key={e.name}>
                       <li className="hover:text-brand-dark px-2  text-md m-2  font-medium ">
@@ -182,7 +182,7 @@ const Navbar = () => {
             </aside>
           </section>
         </header>
-      </AnimationRightToLeft>
+     </AnimationLeftToRight>
     </>
   )
 }
