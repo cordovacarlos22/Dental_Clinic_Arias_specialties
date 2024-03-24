@@ -53,15 +53,11 @@ const Navbar = () => {
       <AnimationLeftToRight>
         {/* The code you provided is defining the desktop version of the navigation bar for a website
       using React. Let's break down the structure and functionality of this code snippet: */ }
-        <header className=" fixed  top-0 z-10 left-0 right-0 hidden   mx-2 p-2 md:block   md:mx-auto bg-white  md:flex-1  lg:flex lg:mx-auto  min-h-40  items-center   lg:justify-around ">
+        <header className="  hidden   mx-2 p-2 md:block   md:mx-auto bg-white  md:flex-1  lg:flex lg:mx-auto  min-h-40  items-center   lg:justify-around ">
           {/* logo section */}
           <section className=" logo-container flex justify-start  lg:ml-4 md:m-2">
             <Link className="flex" href="/">
               <Image priority={false} className="size-18 " src={logo} alt="red cross"></Image>
-              {/* <aside className="flex flex-col  ml-2 justify-center font-extrabold ">
-              <p className="text-brand-darker md:text-md lg:text-2xl">Clinica Arias</p>
-              <p className="text-brand-dark md:text-md font-bold lg:text-lg ">Especialidades Dentales </p>
-            </aside> */}
             </Link>
           </section>
           <section className="right-container flex justify-center items-center flex-col gap-4">
@@ -113,7 +109,7 @@ const Navbar = () => {
         {/* The code you provided is defining a responsive mobile version of the navigation bar for a
       website. It includes sections for displaying emergency contact information, logo, navigation
       links, phone number, location map link, and appointment scheduling button.  */}
-        <header className="mobile  fixed right-0 left-0 top-0  bg-white mx-auto md:hidden">
+        <header className="mobile    bg-white mx-auto md:hidden">
           <Link href="/citas" >
             <section className="mobile-top bg-gray-200 w-full flex justify-center items-center ">
               <p className="text-orange-400   text-xs  font-bold"> <span className="text-orange-400">+ </span> DISPONIBLES PARA EMERGENCIA</p>
@@ -182,7 +178,7 @@ const Navbar = () => {
             </aside>
           </section>
         </header>
-     </AnimationLeftToRight>
+      </AnimationLeftToRight>
     </>
   )
 }
