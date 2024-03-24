@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
 
-      <body className="w-screen h-screen p-0 m-0 box-border bg-brand-darker  relative  ">
+      <body className="w-screen h-screen p-0 m-0 box-border bg-brand-darker ">
         <Navbar />
         
           {children}
