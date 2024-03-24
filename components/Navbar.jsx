@@ -173,7 +173,7 @@ const Navbar = () => {
             </aside>
             <aside className="bg-brand-dark flex-1 ">
               <aside className="bg-brand-darker flex-1  flex flex-col  items-center p-2 ">
-                <Link className=" flex flex-col justify-center" href='/citas'>
+                <Link onClick={() => setToggle(!toggle)} className=" flex flex-col justify-center" href='/citas'>
                   <Image className="my-0 mx-auto size-6" priority={false} src={calendar} alt="phone" ></Image>
 
                   <p className="text-sm text-white">Agendar Cita</p>
