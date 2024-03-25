@@ -68,12 +68,12 @@ const Hero = () => {
         </section>
       </article>
       <section
-        className=" items-center flex flex-col md:flex-row gap-4  md:justify-around   bg-brand-light p-2 "
+        className=" items-center flex flex-col bg-brand-light md:flex-row gap-4  md:justify-around    p-2 "
         
         
       >
         <HeroComponents
-          className1="flex    w-1/2 flex-col justify-center  text-center items-center  "
+          className1="flex    w-1/3 flex-col justify-center  text-center items-center  m-2 p-2 "
           img={family}
           alt="family icon"
           title=" ODONTOLOGÍA FAMILIAR"
@@ -81,7 +81,7 @@ const Hero = () => {
         />
 
         <HeroComponents
-          className1="flex  w-1/2 flex-col justify-center text-center items-center  "
+          className1="flex  w-1/3 flex-col justify-center text-center items-center   m-2 p-2"
           img={heart}
           alt="Heart icon"
           title=" NUESTROS PACIENTES NOS QUIEREN"
@@ -89,7 +89,7 @@ const Hero = () => {
         />
 
         <HeroComponents
-          className1="flex  w-1/2 flex-col justify-center text-center items-center "
+          className1="flex  w-1/3 flex-col justify-center text-center items-center  m-2 p-2"
           img={surgeonDoctor}
           alt="Surgeon Doctor icon"
           title=" ODONTOLOGÍA DE URGENCIA"
