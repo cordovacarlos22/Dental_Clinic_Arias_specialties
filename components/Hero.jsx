@@ -9,7 +9,7 @@ import HeroComponents from './HeroComponents';
 import family from '@/public/family.svg';
 import heart from '@/public/heart.svg';
 import surgeonDoctor from '@/public/surgeon-doctor.svg';
-import waves from '@/public/wavesBG.svg';
+import redCross from '@/public/CRUZ ROJA.svg';
 
 const Hero = () => {
   return (
@@ -73,7 +73,7 @@ const Hero = () => {
         
       >
         <HeroComponents
-          className1="flex    w-1/3 flex-col justify-center  text-center items-center  m-2 p-2 "
+          className1="flex    w-1/3 flex-col justify-center  text-center items-center  m-2 p-2 text-lg font-bold  text-brand-darker"
           img={family}
           alt="family icon"
           title=" ODONTOLOGÍA FAMILIAR"
@@ -81,7 +81,7 @@ const Hero = () => {
         />
 
         <HeroComponents
-          className1="flex  w-1/3 flex-col justify-center text-center items-center   m-2 p-2"
+          className1="flex  w-1/3 flex-col justify-center text-center items-center   m-2 p-2 text--lg font-bold  text-brand-darker"
           img={heart}
           alt="Heart icon"
           title=" NUESTROS PACIENTES NOS QUIEREN"
@@ -89,11 +89,11 @@ const Hero = () => {
         />
 
         <HeroComponents
-          className1="flex  w-1/3 flex-col justify-center text-center items-center  m-2 p-2"
-          img={surgeonDoctor}
+          className1="flex  w-1/3 flex-col justify-center text-center items-center  m-2 p-2 text-lg font-bold  text-brand-darker"
+          img={redCross}
           alt="Surgeon Doctor icon"
           title=" ODONTOLOGÍA DE URGENCIA"
-          paragraph="Listo para ayudar a nuestros pacientes"
+          paragraph="Listos para ayudar a nuestros pacientes"
         />
 
       </section>
