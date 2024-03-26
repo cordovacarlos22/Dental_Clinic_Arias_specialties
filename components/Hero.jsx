@@ -1,3 +1,5 @@
+/* The above code is a React component named `Hero` that represents a section of a website for a dental
+clinic. Here is a summary of what the code is doing: */
 import Image from 'next/image'
 import React from 'react'
 import map from "@/public/map logo.svg";
@@ -226,7 +228,7 @@ const Hero = () => {
           section1="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
           section2="flex-1 w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem] bg-brand-darker rounded-b-md   md:rounded-r-md md:rounded-tl-none md:rounded-bl-none  text-center flex justify-center items-center "
           section2_innerText={
-            <Direciones/>
+            <Direciones />
           }
           section1_innerText={
             <iframe
