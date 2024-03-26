@@ -23,7 +23,7 @@ import muelasDelJuicio from '@/public/muelasDelJuicio.svg';
 import dentaduras from '@/public/dentaduras.svg';
 import rayosX from '@/public/rayosX.svg';
 import fatimaDentista from '@/public/fatimaDentista.svg';
-import HeroInfo from './HeroInfo';
+import HeroCards from './HeroCards';
 import Horario from './Horario';
 import clinicaArias from '@/public/clinica img.png'
 import Direciones from './Direciones';
@@ -212,7 +212,7 @@ const Hero = () => {
       </section>
 
       <section className='bg-white flex flex-col justify-center items-center mx-auto w-screen'>
-        <HeroInfo
+        <HeroCards
           title="Nuestros Horarios de Atención"
           article="flex flex-col md:flex-row justify-center align-center text-center  "
           section1="flex-1 bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
@@ -222,7 +222,7 @@ const Hero = () => {
             <Image className='rounded-b-md  md:rounded-bl-none md:rounded-r-md' src={clinicaArias} alt='clinica arias'></Image>
           }
         />
-        <HeroInfo
+        <HeroCards
           title=" Nuestra Locación"
           article="md:flex text-center "
           section1="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
@@ -243,7 +243,7 @@ const Hero = () => {
           }
         />
 
-        <HeroInfo
+        <HeroCards
           title="Metodos De Pago"
           article="md:flex text-center "
           section2="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
