@@ -223,15 +223,15 @@ const Hero = () => {
         <HeroInfo
           title=" Nuestra Locación"
           article="md:flex text-center "
-          section1="flex-1 w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem] bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
-          section2="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
-          section1_innerText={
+          section1="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
+          section2="flex-1 w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem] bg-brand-darker rounded-b-md   md:rounded-r-md md:rounded-tl-none md:rounded-bl-none  text-center flex justify-center items-center "
+          section2_innerText={
             <Direciones/>
           }
-          section2_innerText={
+          section1_innerText={
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15487.059368986795!2d-89.7600104!3d13.9725982!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62955026819459%3A0xc7eac9bfb81fe418!2sCl%C3%ADnica%20Arias%20-%20Especialidades%20dentales!5e0!3m2!1ses!2sus!4v1711476144488!5m2!1ses!2sus"
-              className='w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem]'
+              className=' rounded-t-md md:rounded-rl-none md:rounded-l-md w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem]'
               style={{ border: 0 }}
               allowFullScreen=''
               loading="lazy"
