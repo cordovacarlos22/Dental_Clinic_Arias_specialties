@@ -26,7 +26,7 @@ import Horario from './Horario';
 import clinicaArias from '@/public/clinica img.png'
 import Direciones from './Direciones';
 import { MetodosPago } from './MetodosPago';
-import creditcard from '@/public/metodopago.svg'
+import creditcard from '@/public/creditcard.svg'
 const servicios = [
 
   {
@@ -209,7 +209,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className='bg-white flex flex-col justify-center items-center mx-auto'>
+      <section className='bg-white flex flex-col justify-center items-center mx-auto w-screen'>
         <HeroInfo
           title="Nuestros Horarios de Atención"
           article="flex flex-col md:flex-row justify-center align-center text-center  "
@@ -221,21 +221,31 @@ const Hero = () => {
           }
         />
         <HeroInfo
-          title="Nuestros Horarios de Atención"
-          article="flex flex-col md:flex-row justify-center align-center text-center  "
-          section1="flex-1 bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
-          section2="flex-1  "
-          section1_innerText={<Horario />}
-          section2_innerText={
+          title=" Nuestra Locación"
+          article="md:flex text-center "
+          section1="flex-1 w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem] bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
+          section2="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
+          section1_innerText={
             <Direciones/>
+          }
+          section2_innerText={
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15487.059368986795!2d-89.7600104!3d13.9725982!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62955026819459%3A0xc7eac9bfb81fe418!2sCl%C3%ADnica%20Arias%20-%20Especialidades%20dentales!5e0!3m2!1ses!2sus!4v1711476144488!5m2!1ses!2sus"
+              className='w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem]'
+              style={{ border: 0 }}
+              allowFullScreen=''
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+
           }
         />
 
         <HeroInfo
           title="Metodos De Pago"
           article="md:flex text-center "
-          section1="flex-1 bg-brand-darker rounded-l-md text-center flex justify-center items-center w-1/2"
-          section2="flex-1 rounded-r-md w-1/2 bg-brand-light  flex "
+          section2="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
+          section1="flex-1 w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem] bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
           section1_innerText={<MetodosPago />}
           section2_innerText={
             <Image className='rounded-r-md' src={creditcard} alt='clinica arias'></Image>
