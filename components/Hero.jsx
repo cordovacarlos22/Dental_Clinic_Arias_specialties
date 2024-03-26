@@ -12,14 +12,64 @@ import heart from '@/public/heart.svg';
 import redCross from '@/public/CRUZ ROJA.svg';
 import emergencia from '@/public/emergencia.svg';
 import limpiezaDientes from '@/public/limpieza de dientes.svg';
-
+import coronas from '@/public/coronas.svg';
+import rellenos from '@/public/rellenos.svg';
+import puentesDentales from '@/public/puentes dentales.svg';
+import extraccionesDentales from '@/public/extracciones.svg';
+import unionesDentales from '@/public/unionesDentales.svg';
+import muelasDelJuicio from '@/public/muelasDelJuicio.svg';
+import dentaduras from '@/public/dentaduras.svg';
+import rayosX from '@/public/rayosX.svg';
 const servicios = [
   
   {
     title: 'Limpieza Dental',
     icon: limpiezaDientes,
-    textcolor: '#009CDD'
+    textcolors: '009CDD'
+  }, 
+  {
+    title: 'Coronas Dentales',
+    icon: coronas,
+    textcolors: '009CDD'
   },
+  {
+    title: 'Rellenos Dentales',
+    icon: rellenos,
+    textcolors: '009CDD'
+  },
+  {
+    title: 'Puentes Dentales',
+    icon: puentesDentales,
+    textcolors: '009CDD'
+  },
+ 
+  {
+    title: 'Uniones Dentales',
+    icon: unionesDentales,
+    textcolors: '009CDD'
+  },
+  {
+    title: 'Dentaduras',
+    icon: dentaduras,
+    textcolors: '009CDD'
+  },
+  {
+    title: 'Radiografías Dentales ',
+    icon: rayosX,
+    textcolors: '009CDD'
+  },
+  {
+    title: 'Muelas del juicio / Cirugía Oral',
+    icon: muelasDelJuicio,
+    textcolors: '009CDD'
+  },
+  {
+    title: 'Extracciones Dentales',
+    icon: extraccionesDentales,
+    textcolors: '009CDD'
+  },
+  
+
 
 ]
 
@@ -118,25 +168,25 @@ const Hero = () => {
             todos nuestros servicios
           </Link>
         </button>
-        <section className='flex flex-1'>
-          <HeroServicio
-            key='emergencia'
-            icon={emergencia}
-            iconAlt='emergencia icon'
-            textcolors={`text-[#F55102]`}
-            Tittle='Emergencia'
-          />
+        <section className='flex flex-1 flex-wrap lg:w-2/3 justify-center'>
+          <div className={`w-[150px] h-[150px] flex flex-col  items-center m-2 p-2  text-[#F55102]`}>
+            <Image src={emergencia} alt="emergencia  icon"></Image>
+            <h1 className={`capitalize`}>emergencia</h1>
+          </div>
           {servicios && servicios.map(item => (
-            <HeroServicio
-              key={item.title}
-              icon={item.icon}
-              iconAlt={item.title}
-              textcolors={`text-[#009CDD]`}
-              Tittle={item.title}
-            />
+            <Link key={item.title}  href={`/servicios/${item.title}`}>
+              <HeroServicio
+                iconClass='hover:fill-red-500'
+                icon={item.icon}
+                iconAlt={item.title}
+                headerClass='text-[#009CDD] hover:text-black'
+                Tittle={item.title}
+              />
+           </Link>
           ))}
         </section>
       </section>
+      
     </>
   )
 }
