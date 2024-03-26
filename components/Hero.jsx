@@ -20,13 +20,15 @@ import unionesDentales from '@/public/unionesDentales.svg';
 import muelasDelJuicio from '@/public/muelasDelJuicio.svg';
 import dentaduras from '@/public/dentaduras.svg';
 import rayosX from '@/public/rayosX.svg';
+import fatimaDentista from '@/public/fatimaDentista.svg';
+
 const servicios = [
-  
+
   {
     title: 'Limpieza Dental',
     icon: limpiezaDientes,
     textcolors: '009CDD'
-  }, 
+  },
   {
     title: 'Coronas Dentales',
     icon: coronas,
@@ -42,7 +44,7 @@ const servicios = [
     icon: puentesDentales,
     textcolors: '009CDD'
   },
- 
+
   {
     title: 'Uniones Dentales',
     icon: unionesDentales,
@@ -68,7 +70,7 @@ const servicios = [
     icon: extraccionesDentales,
     textcolors: '009CDD'
   },
-  
+
 
 
 ]
@@ -109,10 +111,10 @@ const Hero = () => {
               </Link>
             </button>
             <p className="text-sm text-gray-700 tracking-wide font-black">O Llamar
-            <Link   href="tel:+503-7322-2299" className="inline  text-brand-dark justify-center items-center ">
+              <Link href="tel:+503-7322-2299" className="inline  text-brand-dark justify-center items-center ">
                 <span> 503 7322 2299</span>
-            </Link>  </p>
-            
+              </Link>  </p>
+
           </section>
         </section>
       </header>
@@ -174,7 +176,7 @@ const Hero = () => {
             <h1 className={`capitalize`}>emergencia</h1>
           </div>
           {servicios && servicios.map(item => (
-            <Link key={item.title}  href={`/servicios/${item.title}`}>
+            <Link key={item.title} href={`/servicios/${item.title}`}>
               <HeroServicio
                 iconClass='hover:fill-red-500'
                 icon={item.icon}
@@ -182,9 +184,22 @@ const Hero = () => {
                 headerClass='text-[#009CDD] hover:text-black'
                 Tittle={item.title}
               />
-           </Link>
+            </Link>
           ))}
         </section>
+      </section>
+      <section className=' flex flex-col lg:flex-row justify-center bg-gray-300 p-4  gap-2  w-3/4 lg:w-1/2 mx-auto my-4 text-center items-center rounded-lg'>
+        <div className=' size-24 bg-brand-light rounded-full flex justify-center'>
+          <Image src={fatimaDentista} alt='fatima dentista'></Image>
+        </div>
+        <div className='md:w-1/2' >
+          <h1 className='font-bold text-brand-darker'>Dra. Fátima Hernández</h1>
+          <span className='text-xs text-brand-dark font-semibold'>Doctora en Cirugía Dental( Fundadora )</span>
+          <p className='text-sm text-brand-darker '>"Mis pacientes pueden esperar un consultorio dental familiar, amigable y afectuoso. La atención al paciente y la satisfacción de sus necesidades es mi máxima prioridad"</p>
+          <Link href="/dentistas">
+            <button className='bg-brand-darker p-2 my-2  text-white rounded-md'>Conoce Al Resto Del Equipo</button>
+          </Link>
+        </div>
       </section>
       
     </>
