@@ -195,13 +195,13 @@ const Hero = () => {
         <div className='md:w-1/2' >
           <h1 className='font-bold text-brand-darker'>Dra. Fátima Hernández</h1>
           <span className='text-xs text-brand-dark font-semibold'>Doctora en Cirugía Dental( Fundadora )</span>
-          <p className='text-sm text-brand-darker '>"Mis pacientes pueden esperar un consultorio dental familiar, amigable y afectuoso. La atención al paciente y la satisfacción de sus necesidades es mi máxima prioridad"</p>
+          <p className='text-sm text-brand-darker '>Mis pacientes pueden esperar un consultorio dental familiar, amigable y afectuoso. La atención al paciente y la satisfacción de sus necesidades es mi máxima prioridad</p>
           <Link href="/dentistas">
             <button className='bg-brand-darker p-2 my-2  text-white rounded-md'>Conoce Al Resto Del Equipo</button>
           </Link>
         </div>
       </section>
-      
+
     </>
   )
 }
