@@ -21,7 +21,12 @@ import muelasDelJuicio from '@/public/muelasDelJuicio.svg';
 import dentaduras from '@/public/dentaduras.svg';
 import rayosX from '@/public/rayosX.svg';
 import fatimaDentista from '@/public/fatimaDentista.svg';
-
+import HeroInfo from './HeroInfo';
+import Horario from './Horario';
+import clinicaArias from '@/public/clinica img.png'
+import Direciones from './Direciones';
+import { MetodosPago } from './MetodosPago';
+import creditcard from '@/public/metodopago.svg'
 const servicios = [
 
   {
@@ -74,6 +79,7 @@ const servicios = [
 
 
 ]
+
 
 const Hero = () => {
   return (
@@ -188,6 +194,7 @@ const Hero = () => {
           ))}
         </section>
       </section>
+
       <section className=' flex flex-col lg:flex-row justify-center bg-gray-300 p-4  gap-2  w-3/4 lg:w-1/2 mx-auto my-4 text-center items-center rounded-lg'>
         <div className=' size-24 bg-brand-light rounded-full flex justify-center'>
           <Image src={fatimaDentista} alt='fatima dentista'></Image>
@@ -200,6 +207,40 @@ const Hero = () => {
             <button className='bg-brand-darker p-2 my-2  text-white rounded-md'>Conoce Al Resto Del Equipo</button>
           </Link>
         </div>
+      </section>
+
+      <section className='bg-white flex flex-col justify-center items-center mx-auto'>
+        <HeroInfo
+          title="Nuestros Horarios de Atención"
+          article="flex flex-col md:flex-row justify-center align-center text-center  "
+          section1="flex-1 bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
+          section2="flex-1  "
+          section1_innerText={<Horario />}
+          section2_innerText={
+            <Image className='rounded-b-md  md:rounded-bl-none md:rounded-r-md' src={clinicaArias} alt='clinica arias'></Image>
+          }
+        />
+        <HeroInfo
+          title="Nuestros Horarios de Atención"
+          article="flex flex-col md:flex-row justify-center align-center text-center  "
+          section1="flex-1 bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
+          section2="flex-1  "
+          section1_innerText={<Horario />}
+          section2_innerText={
+            <Direciones/>
+          }
+        />
+
+        <HeroInfo
+          title="Metodos De Pago"
+          article="md:flex text-center "
+          section1="flex-1 bg-brand-darker rounded-l-md text-center flex justify-center items-center w-1/2"
+          section2="flex-1 rounded-r-md w-1/2 bg-brand-light  flex "
+          section1_innerText={<MetodosPago />}
+          section2_innerText={
+            <Image className='rounded-r-md' src={creditcard} alt='clinica arias'></Image>
+          }
+        />
       </section>
 
     </>
