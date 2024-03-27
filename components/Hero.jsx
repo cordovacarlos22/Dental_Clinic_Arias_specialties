@@ -29,6 +29,9 @@ import clinicaArias from '@/public/clinica img.png'
 import Direciones from './Direciones';
 import { MetodosPago } from './MetodosPago';
 import creditcard from '@/public/creditcard.svg'
+import ReviewsCarousel from './ReviewsCarousel';
+import Carousel from './Carousel';
+
 const servicios = [
 
   {
@@ -254,7 +257,8 @@ const Hero = () => {
           }
         />
       </section>
-
+      {/* <ReviewsCarousel /> */}
+      <Carousel/>
     </>
   )
 }
