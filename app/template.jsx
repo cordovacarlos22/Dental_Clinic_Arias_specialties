@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
+import WhatsApp from "@/components/WhatsApp";
 
 const AnimationBottomToTop = ({ children }) => {
   return (
@@ -11,6 +12,9 @@ const AnimationBottomToTop = ({ children }) => {
       transition={{ ease: 'easeInOut', duration: 1 }}
     >
       {/* <Navbar/> */}
+      <div className="fixed  bottom-0 right-0 m-4   z-50  ">
+        <WhatsApp />
+      </div>
      {children}
     </motion.div>
   )
