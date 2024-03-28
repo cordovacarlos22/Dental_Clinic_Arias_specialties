@@ -6,7 +6,7 @@ import Link from 'next/link'
 import facebookIcon from '@/public/facebookIcon.svg';
 import instagramIcon from '@/public/instragramIcon.svg';
 import tiktokIcon from '@/public/tiktokIcon.svg';
-import whatsappIcon from '@/public/whatsappICon.svg';
+import whatsappIcon from '@/public/whatsappIcon.svg';
 import homeIcon from '@/public/homeIcon.svg';
 import mapIcon from '@/public/mapIcon.svg';
 import phoneIcon from '@/public/phoneIcon.svg';
