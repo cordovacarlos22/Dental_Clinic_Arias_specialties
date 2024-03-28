@@ -41,7 +41,7 @@ const Horario = () => {
 
   ]
   return (
-    <div className='text-white font-bold p-4 '>
+    <div className='text-white  p-4 '>
      
       {horarioDeAtencion.map((d)=>(
         <p
