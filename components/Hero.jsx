@@ -30,7 +30,6 @@ import Direciones from './Direciones';
 import { MetodosPago } from './MetodosPago';
 import creditcard from '@/public/creditcard.svg'
 import ReviewsCarousel from './ReviewsCarousel';
-import Carousel from './Carousel';
 
 const servicios = [
 
@@ -257,8 +256,10 @@ const Hero = () => {
           }
         />
       </section>
-      {/* <ReviewsCarousel /> */}
-      <Carousel/>
+      <section className='bg-white w-screen  justify-center items-center ' >
+        <h1>¡Nuestros pacientes nos aman! Dentista calificado de 5 estrellas. ¡está en buenas manos!</h1>
+        <ReviewsCarousel/>
+      </section>
     </>
   )
 }
