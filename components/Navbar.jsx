@@ -55,7 +55,7 @@ const Navbar = () => {
       <AnimationLeftToRight>
         {/* The code you provided is defining the desktop version of the navigation bar for a website
       using React. Let's break down the structure and functionality of this code snippet: */ }
-        <header className="  hidden   mx-2 p-2 md:block   md:mx-auto bg-white  md:flex-1  lg:flex lg:mx-auto  min-h-40  items-center   lg:justify-around ">
+        <header className="  hidden   mx-2 p-2 md:block   md:mx-auto bg-white  md:flex-1  lg:flex lg:mx-auto  min-h-40  items-center   lg:justify-around  z-10">
           {/* logo section */}
           <section className=" logo-container flex justify-start  lg:ml-4 md:m-2">
             <Link className="flex" href="/">
