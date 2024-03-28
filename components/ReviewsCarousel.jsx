@@ -44,7 +44,7 @@ export default function EmblaCarousel() {
         {reviews.map((review) => (
           <div className='embla__slide  bg-brand-darker  rounded-md  mx-auto flex flex-1 flex-col justify-center items-center   p-2 ' key={review.user}>
             <div className=' bg-white rounded-full flex justify-center  my-4'>
-              <Image width={80} height={80} src={review.avatar} alt={review.user}></Image>
+              <Image className='w-auto h-auto' width={80} height={80} src={review.avatar} alt={review.user}></Image>
             </div>
             <h1 className="text-white font-bold md:text-xl  mb-2">{review.user}</h1>
             <p className="text-white  font-medium  mt-2">{review.review}</p>
