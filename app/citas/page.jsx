@@ -1,9 +1,11 @@
+import Calendario from "@/components/Calendario"
 
 
 const Citas = () => {
   return (
-    <div className=" mt-56 md:mt-36 bg-red-500 w-screen   z-0  p-6   ">
+    <div className=" w-screen ">
       <h1>citas</h1>
+      <Calendario/>
     </div>
   )
 }
