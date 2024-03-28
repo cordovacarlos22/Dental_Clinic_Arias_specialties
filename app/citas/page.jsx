@@ -4,7 +4,7 @@ import Link from "next/link"
 import cross from '@/public/cross.svg'
 const Citas = () => {
   return (
-    <div className=" w-screen ">
+    <div className=" w-screen mt-56  md:mt-62 lg:mt-40  h-screen z-0 ">
       <div  className="w-full flex flex-col justify-center  items-center bg-brand-light ">
       <h1 className=" m-4 capitalize text-brand-darker lg:text-xl font-bold pt-4  justify-center text-center">Vamos a Programar su cita!</h1>
         <p className="text-brand-dark text-xs md:text-md  flex gap-2 p-2">
