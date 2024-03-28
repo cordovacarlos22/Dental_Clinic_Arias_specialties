@@ -1,58 +1,87 @@
 'use client'
 
-import React from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
+import React, { useCallback } from 'react'
+import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons
+} from './EmblaCarouselArrowButtons'
 import Autoplay from 'embla-carousel-autoplay'
+import useEmblaCarousel from 'embla-carousel-react'
+
 
 import Image from 'next/image'
 import manAvatar from '@/public/man.svg';
 import womenAvatar from '@/public/woman.svg';
 import fiveStar from '@/public/fivestarts.svg';
 
-export default function EmblaCarousel() {
+const EmblaCarousel = (props) => {
+  const { slides, options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
-  let reviews = [
-    {
-      user: "Adela Guzman",
-      review: "Exelente atención",
-      avatar: womenAvatar
-    },
-    {
-      user: "Rodil Monzon",
-      review: "atención de primer nivel. muy recomendadicimo. buena atención calidad y calidez humana.",
-      avatar: manAvatar
-    },
-    {
-      user: "Stephanie Ramírez",
-      review: "Calidad, servicio, atencion la carecteriza . la clinica. tratos con niños con amor y delicadesa que es algo bien importante cuando hablamos de niños en el dentista. 100x100to recomendada",
-      avatar: womenAvatar
-    },
-    {
-      user: "Ana Guerra",
-      review: "Muy buen servicio",
-      avatar: womenAvatar
-    },
+  const onNavButtonClick = useCallback((emblaApi) => {
+    const autoplay = emblaApi?.plugins()?.autoplay
+    if (!autoplay) return
 
+    const resetOrStop =
+      autoplay.options.stopOnInteraction === false
+        ? autoplay.reset
+        : autoplay.stop
 
+    resetOrStop()
+  }, [])
 
-  ];
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
+    emblaApi,
+    onNavButtonClick
+  )
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
-    <div className="embla border max-w-lg bg-white mt-12 mx-auto h-56" ref={emblaRef}>
-      <div className="embla__container h-full">
-        {reviews.map((review) => (
-          <div className='embla__slide  bg-brand-darker  w-1/2 rounded-md  mx-auto flex flex-1 flex-col justify-center items-center m-4 p-4 ' key={review.user}>
-            <div className='w-20 h-20 bg-white rounded-full flex justify-center '>
-              <Image width={50} height={50} src={review.avatar} alt={review.user}></Image>
+    <section className="embla">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container  ">
+          {slides.map((index) => (
+            <div className="embla__slide  bg-brand-darker  flex flex-col  flex-wrap justify-center items-center rounded-md p-4 mx-2"  key={index}>
+              {/* <div className="embla__slide__number">{index + 1}</div> */}
+              <div className=' bg-white rounded-full flex  justify-center '>
+                <Image width={50} height={50} src={index.avatar} alt={index.user}></Image>
+              </div>
+              <h1 className="text-white mb-2">{index.user}</h1>
+              <p className="text-white mt-2">{index.review}</p>
+              <Image src={fiveStar} alt='five stars'></Image>
             </div>
-            <h1 className="text-white mb-2">{review.user}</h1>
-            <p className="text-white mt-2">{review.review}</p>
-            <Image src={fiveStar} alt='five stars'></Image>
-          </div>
-        ))}
-       
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
+
+export default EmblaCarousel

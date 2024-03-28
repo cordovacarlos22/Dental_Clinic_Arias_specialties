@@ -36,18 +36,18 @@ export default function EmblaCarousel() {
 
 
   ];
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({delay:5000})]);
 
   return (
-    <div className="embla border max-w-lg bg-white mt-12 mx-auto h-56" ref={emblaRef}>
-      <div className="embla__container h-full">
+    <div className="embla flex items-center text-center justify-center w-full  md:p-4 lg:px-4" ref={emblaRef}>
+      <div className="embla__container w-full p-2 md:w-full md:p-0  flex gap-4 ">
         {reviews.map((review) => (
-          <div className='embla__slide  bg-brand-darker  w-1/2 rounded-md  mx-auto flex flex-1 flex-col justify-center items-center m-4 p-4 ' key={review.user}>
-            <div className='w-20 h-20 bg-white rounded-full flex justify-center '>
-              <Image width={50} height={50} src={review.avatar} alt={review.user}></Image>
+          <div className='embla__slide  bg-brand-darker  rounded-md  mx-auto flex flex-1 flex-col justify-center items-center   p-2 ' key={review.user}>
+            <div className=' bg-white rounded-full flex justify-center  my-4'>
+              <Image width={80} height={80} src={review.avatar} alt={review.user}></Image>
             </div>
-            <h1 className="text-white mb-2">{review.user}</h1>
-            <p className="text-white mt-2">{review.review}</p>
+            <h1 className="text-white font-bold md:text-xl  mb-2">{review.user}</h1>
+            <p className="text-white  font-medium  mt-2">{review.review}</p>
             <Image src={fiveStar} alt='five stars'></Image>
           </div>
         ))}

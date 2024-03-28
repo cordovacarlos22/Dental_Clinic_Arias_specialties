@@ -84,6 +84,10 @@ const servicios = [
 
 ]
 
+const OPTIONS = { loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
 
 const Hero = () => {
   return (
@@ -256,10 +260,25 @@ const Hero = () => {
           }
         />
       </section>
-      <section className='bg-white w-screen  justify-center items-center ' >
-        <h1>¡Nuestros pacientes nos aman! Dentista calificado de 5 estrellas. ¡está en buenas manos!</h1>
+      <section className='bg-brand-light rounded-md   m-4   lg:full lg:m-8 lg:my-12  justify-center items-center flex flex-col  ' >
+        <h1 className='hidden md:inline text-brand-darker font-bold mt-4 '>¡Nuestros pacientes nos aman!  Dentista calificado de 5 estrellas. ¡está en buenas manos!</h1>
+        <h1 className=' md:hidden mt-2 text-brand-darker  md:hiddentext-brand-darker text-md text-center'>¡Nuestros pacientes nos aman!</h1>
+        <p className='md:hidden text-brand-darker text-center'> Dentista calificado de 5 estrellas. ¡está en buenas manos!</p>
         <ReviewsCarousel/>
       </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br /><br />
+      <br />
+      <br />
+      <br />
+      <br /><br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   )
 }
