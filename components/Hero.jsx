@@ -1,7 +1,7 @@
 /* The above code is a React component named `Hero` that represents a section of a website for a dental
 clinic. Here is a summary of what the code is doing: */
 import Image from 'next/image'
-import React from 'react'
+import React, { lazy } from 'react'
 import map from "@/public/map logo.svg";
 import Link from 'next/link';
 import smile_model from "@/public/smile_model.svg";
@@ -30,6 +30,7 @@ import Direciones from './Direciones';
 import { MetodosPago } from './MetodosPago';
 import creditcard from '@/public/creditcard.svg'
 import ReviewsCarousel from './ReviewsCarousel';
+import Footer from './Footer';
 
 const servicios = [
 
@@ -225,7 +226,7 @@ const Hero = () => {
           section2="flex-1  "
           section1_innerText={<Horario />}
           section2_innerText={
-            <Image className='rounded-b-md  md:rounded-bl-none md:rounded-r-md' src={clinicaArias} alt='clinica arias'></Image>
+            <Image className='rounded-b-md  md:rounded-bl-none md:rounded-r-md' priority src={clinicaArias} alt='clinica arias'></Image>
           }
         />
         <HeroCards
@@ -253,10 +254,10 @@ const Hero = () => {
           title="Metodos De Pago"
           article="md:flex text-center "
           section2="flex-1  w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem]  lg:h-[24.6rem]bg-brand-darker "
-          section1="flex-1 w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[17rem] lg:w-[33rem] lg:h-[24.6rem] bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
+          section1="flex-1 w-[21.3rem] h-[16.2rem] md:w-[22.5rem] md:h-[16.5rem] lg:w-[33rem] lg:h-[26rem] bg-brand-darker rounded-t-md   md:rounded-l-md md:rounded-tr-none text-center flex justify-center items-center "
           section1_innerText={<MetodosPago />}
           section2_innerText={
-            <Image className='rounded-r-md' src={creditcard} alt='clinica arias'></Image>
+            <Image className='rounded-r-md items-center' src={creditcard} alt='clinica arias'></Image>
           }
         />
       </section>
@@ -266,19 +267,7 @@ const Hero = () => {
         <p className='md:hidden text-brand-darker text-center'> Dentista calificado de 5 estrellas. ¡está en buenas manos!</p>
         <ReviewsCarousel/>
       </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /><br />
-      <br />
-      <br />
-      <br />
-      <br /><br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Footer/>
     </>
   )
 }
