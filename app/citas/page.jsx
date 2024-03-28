@@ -1,6 +1,5 @@
 import Calendario from "@/components/Calendario"
-import Image from "next/image"
-import smile from '@/public/smile.jpg';
+
 
 const Citas = () => {
   return (
