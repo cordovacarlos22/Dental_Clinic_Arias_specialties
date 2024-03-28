@@ -1,3 +1,5 @@
+/* The above code is a React component called `Navbar` that defines a responsive navigation bar for a
+website. Here's a breakdown of what the code is doing: */
 'use client'
 import Image from "next/image";
 import Link from "next/link";
@@ -57,7 +59,7 @@ const Navbar = () => {
           {/* logo section */}
           <section className=" logo-container flex justify-start  lg:ml-4 md:m-2">
             <Link className="flex" href="/">
-              <Image priority={false} className="size-18 " src={logo} alt="red cross"></Image>
+              <Image priority={false} className="size-18 " src={logo} alt="logo"></Image>
             </Link>
           </section>
           <section className="right-container flex justify-center items-center flex-col gap-4">
@@ -117,8 +119,10 @@ const Navbar = () => {
           </Link>
           <section className="mobile-middle  flex flex-col  w-full  justify-between px-4">
             <aside className="flex justify-around">
-              <Image priority={true} src={logo} className="size-40 m-0 p-0" alt="logo"></Image>
-
+              
+              <Link className="flex" href="/">
+                <Image priority={true} src={logo} className="size-40 m-0 p-0" alt="logo"></Image>
+              </Link>
               {/* is creating a button element that, when clicked, toggles the state
            of the `toggle` variable in the component. */ }
               <button onClick={() => setToggle(!toggle)} >
