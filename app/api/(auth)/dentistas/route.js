@@ -31,7 +31,7 @@ export const POST = async (req,res) => {
      
       await connect();
     const body = await req.json();
-      
+
     const newUser = await Dentista.create(body);
     await newUser.save(); 
 
