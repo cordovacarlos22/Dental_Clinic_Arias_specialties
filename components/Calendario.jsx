@@ -6,7 +6,7 @@ const Calendario = () => {
     <div className='w-screen h-screen  '>
       <InlineWidget
         styles={{
-          padding: '1rem', height: '100vh', width: '100vw', borderRadius: '25%'
+          padding: '4rem', height: '100vh', width: '100vw', borderRadius: '25%'
 }}
         pageSettings={{
           backgroundColor: 'ffffff',
