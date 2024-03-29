@@ -12,7 +12,21 @@ const Citas = () => {
           Para Emergencias , por favor  llamarnos al <Link className="font-bold underline" href="tel:+503-7322-2299">503 7322-2299</Link></p>
       {/* <Image className="flex" src={smile} alt="smile"></Image> */}
       </div>
-      <Calendario/>
+      {/* <Calendario/>  por el momento no se reciben citas por el calendario  */} 
+
+     <section className="">
+        <div className=" flex   p-2 flex-col justify-normal bg-brand-light  w-90 h-52  m-10 rounded-3xl">
+          <h1 className="text-center  m-auto font-bold ">
+            por el momento solo recibimos citas por whatsapp☹️, lo sentimos por el inconveniente
+          </h1>
+          <div className="bg-green-600 w-60 text-center flex  rounded-xl p-2 justify-center items-center mx-auto mb-4  text-white">
+            <Link href='https://wa.me/50373222299' target='_blank'>
+              <button className="  ">Agendar Cita por Whatsapp</button>
+            </Link>
+          </div>
+        </div>
+        
+     </section>
     </div>
   )
 }
