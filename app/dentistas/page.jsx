@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
    let URL = process.env.URL //  GLOBAL URL
    let dentistas = await fetch(`${URL}api/dentistas`);
     dentistas = await dentistas.json();
-    // console.log(dentistas);
+    console.log(dentistas);
     return dentistas;
  }
 
@@ -29,16 +29,18 @@ const Dentistas = async () => {
           En Clínica Arias, nuestro equipo de dentistas, especialistas, higienistas y personal de apoyo comparten un único objetivo: ayudar a nuestros pacientes a alcanzar sus objetivos de salud bucal. Entendemos que muchas personas descuidan acudir al dentista por inquietud, lo que puede provocar que los pequeños problemas se agranden con el tiempo. Es por eso que hacemos todo lo posible para ayudarlo a sentirse cómodo desde el momento en que cruza nuestras puertas. Queremos construir una relación duradera y de confianza con usted para poder guiarlo a lo largo de su viaje hacia una mejor salud bucal. Nuestros médicos se mantienen actualizados sobre su educación continua para que siempre podamos brindar los mejores tratamientos disponibles en el campo. No dude en conocernos un poco mejor explorando los perfiles de nuestros médicos a continuación en Clínica Arias.
         </h2>
          </div>
-      <section className="flex flex-1 flex-wrap  w-2/3 justify-center  items-center mx-auto">
+      <section className="flex flex-1 flex-wrap mb-20 w-2/3  justify-center  items-center mx-auto">
         {element.map((d) => (
-          <div className=" w-[220px] h-[220px] flex items-center justify-center mx-auto " key={d.firstName}>
-            <Link href={`/dentistas/${d.firstName}`}>
-              <Image src={logo} alt="logo"></Image>
-              <div>
-                <p>{d.firstName}</p>
-                <p>{d.email}</p>
+          <div className=" w-[220px] h-[220px] flex  m-6 flex-wrap   items-center  justify-center mx-auto " key={d.firstName}>
+            {/* <Link href={`/dentistas/${d.firstName}`}> */}
+              <div className="">
+              <Image className=" bg-brand-light rounded-full" width={180} height={180} src={d.avatar} alt={d.firstName}></Image>
+              <div className="text-center ">
+                <h1 className="capitalize">{d.firstName} {d.firstLastName}</h1>
+                <h2 className="capitalize">{d.specialties}</h2>
               </div>
-            </Link>
+              </div>
+            {/* </Link> */}
           </div>
         ))}
         </section>
