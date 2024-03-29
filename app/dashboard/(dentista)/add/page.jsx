@@ -24,7 +24,7 @@ const AddDentista = () => {
   const addNewDentistaHandler = async (e) => {
     e.preventDefault()
 
-    console.log(firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin, specialties);
+    // console.log(firstName, middleName, firstLastName, secondLastName, userName, email, password, avatar, admin, specialties);
 
 
 
