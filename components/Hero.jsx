@@ -22,7 +22,7 @@ import unionesDentales from '@/public/unionesDentales.svg';
 import muelasDelJuicio from '@/public/muelasDelJuicio.svg';
 import dentaduras from '@/public/dentaduras.svg';
 import rayosX from '@/public/rayosX.svg';
-import fatimaDentista from '@/public/fatimaDentista.svg';
+import fatimaDentista from '@/public/fatima.png';
 import HeroCards from './HeroCards';
 import Horario from './Horario';
 import clinicaArias from '@/public/clinica img.png'
@@ -206,7 +206,7 @@ const Hero = () => {
 
       <section className=' flex flex-col lg:flex-row justify-center bg-gray-300 p-4  gap-2  w-3/4 lg:w-1/2 mx-auto my-4 text-center items-center rounded-lg'>
         <div className=' size-24 bg-brand-light rounded-full flex justify-center'>
-          <Image src={fatimaDentista} alt='fatima dentista'></Image>
+          <Image className=' rounded-full' src={fatimaDentista} alt='fatima dentista'></Image>
         </div>
         <div className='md:w-1/2' >
           <h1 className='font-bold text-brand-darker'>Dra. Fátima Hernández</h1>
