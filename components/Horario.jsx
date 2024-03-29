@@ -41,14 +41,17 @@ const Horario = () => {
 
   ]
   return (
-    <div className='text-white  p-4 '>
+    <div className='text-white  font-thin flex-col items-center justify-center m-2 '>
      
       {horarioDeAtencion.map((d)=>(
         <p
+        className='text-center '
          key={d.dia}
         >{d.dia} {d.horario}</p>
       ))}
-      <p>Ahora Estamos Abiertos</p>
+      <p
+      className='text-center'
+      >Ahora Estamos Abiertos</p>
     </div>
   )
 };

@@ -1,3 +1,5 @@
+/* This code snippet is defining a React component called `Footer`. The component represents a footer
+section of a website and includes contact information, social media icons, and business hours. */
 import Image from 'next/image'
 import React from 'react'
 import logo from '@/public/logo.svg'
@@ -13,6 +15,12 @@ import phoneIcon from '@/public/phoneIcon.svg';
 import clockIcon from '@/public/clockIcon.svg';
 import emailIcon from '@/public/emailIcon.svg';
 
+/* The `socialIcons` array is storing objects that represent different social media platforms along
+with their respective URLs and icons. Each object in the array has the following properties:
+- `name`: The name of the social media platform (e.g., 'facebook', 'instagram', 'Tiktok',
+'whatsapp').
+- `url`: The URL associated with the social media platform.
+- `icon`: The icon image representing the social media platform. */
 let socialIcons = [
   {
     name: 'facebook',
@@ -37,6 +45,8 @@ let socialIcons = [
   },
 ]
 
+/* The `contacto` array is storing objects that represent different contact information related to a
+dental clinic. Each object in the array includes the following properties: */
 let contacto = [
   {
     url:"/",
@@ -66,16 +76,23 @@ let contacto = [
 
 
 ]
+
 const Footer = () => {
   return (
-    <footer className='w-screen'>
+    /* The code snippet you provided is defining a React component called `Footer`. This component
+    represents the footer section of a website and includes various sections such as contact
+    information, social media icons, and business hours. */
+    <footer className='w-screen flex flex-col   items-center'>
       <section className='w-full flex justify-center items-start p-4 bg-brand-light'>
         <Image src={logo} alt=' Clinica Arias Logo'></Image>
       </section>
-      <section className='bg-brand-darker text-white capitalize w-screen flex  flex-col lg:flex-row  items-center justify-around m-6 '>
-        <section className='flex-1 '>
-          <h1 className='text-center  font-bold underline'>Contacto</h1>
-          <div className='flex flex-col justify-center items-start gap-2 m-4'>
+      <section className='bg-brand-darker my-6 text-white capitalize  flex  w-screen flex-col lg:flex-row  justify-around  '>
+        
+        <section className='flex-1  mx-4 flex  flex-col  justify-center '>
+         <h1 className='  font-bold underline  text-center lg:text-start lg:pl-4 text-md md:text-xl lg:text-2xl'>Contacto</h1>
+          
+          
+          <div className='flex  flex-col  items-center lg:items-start gap-2  m-2'>
             {contacto.map((item) => (
               <Link className='flex  gap-4 justify-start' href={item.url} key={item.text}>
                <Image  src={item.icon} alt={item.text}></Image>
@@ -84,9 +101,9 @@ const Footer = () => {
             ))}
           </div>
         </section>
-        <section className='flex flex-1 flex-col justify-center items-center'>
-          <h1 className='font-bold underline'>Sigamos Conectados </h1>
-          <div className='flex gap-4 m-4'>
+        <section className='flex-1 flex flex-col items-center justify-center  mb-2 '>
+          <h1 className='font-bold underline p-2 text-md md:text-xl lg:text-2xl'>Sigamos Conectados </h1>
+          <div className='flex gap-4 mt-2 mb-2 p-2 items-center justify-center'>
             {socialIcons.map((item) => (
               <Link href={item.url} key={item.name} >
                 <Image src={item.icon} alt={item.name}></Image>
@@ -95,8 +112,8 @@ const Footer = () => {
           </div>
           <h6 className=' font-semibold'>¡ REGALANOS UN LIKE !</h6>
         </section>
-        <section className=' flex-1 text-center '>
-          <h1 className='font-semibold underline'>Horario de atención</h1>
+        <section className=' flex-1  flex flex-col justify-center items-center  '>
+          <h1 className='font-semibold underline text-md md:text-xl lg:text-2xl'>Horario de atención</h1>
           <Horario />
         </section>
       </section>
