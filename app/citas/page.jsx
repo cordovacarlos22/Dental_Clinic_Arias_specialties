@@ -2,6 +2,7 @@ import Calendario from "@/components/Calendario"
 import Image from "next/image"
 import Link from "next/link"
 import cross from '@/public/cross.svg'
+import Footer from "@/components/Footer"
 const Citas = () => {
   return (
     <div className=" mt-56  md:mt-62 lg:mt-40 w-screen h-screen z-0 ">
@@ -19,7 +20,7 @@ const Citas = () => {
           <h1 className="text-center  m-auto font-bold ">
             por el momento solo recibimos citas por whatsapp☹️, lo sentimos por el inconveniente
           </h1>
-          <div className="bg-green-600 w-60 text-center flex  rounded-xl p-2 justify-center items-center mx-auto mb-4  text-white">
+          <div className="bg-green-600  hover:bg-green-500 w-60 text-center flex  rounded-xl p-2 justify-center items-center mx-auto mb-4  text-white">
             <Link href='https://wa.me/50373222299' target='_blank'>
               <button className="  ">Agendar Cita por Whatsapp</button>
             </Link>
@@ -27,6 +28,7 @@ const Citas = () => {
         </div>
         
      </section>
+     <Footer/>
     </div>
   )
 }
