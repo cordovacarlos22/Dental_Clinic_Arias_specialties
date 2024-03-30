@@ -75,10 +75,10 @@ const Servicios = () => {
         <div className="w-full flex flex-col justify-center  items-center bg-brand-light ">
           <h1 className="  m-4 capitalize text-brand-darker md:text-xl lg:text-3xl font-bold pt-4  justify-center text-center">Nuestros Servicios dentales</h1>
         </div>
-        <section className='flex  flex-wrap justify-center items-center mx-auto w-3/3 2xl:w-3/4 border-2 border-red-500 '>
+        <section className='flex  flex-wrap justify-center items-center mx-auto w-3/3 2xl:w-3/4  '>
 
           {nuestrosServicios.map((item) => (
-            <div key={item.title} className={`w-[335px] h-[350px]   m-4 text-brand-darker flex flex-col text-center justify-center items-center border-2 border-red-400  `}>
+            <div key={item.title} className={`w-[335px] h-[350px]   m-4 text-brand-darker flex flex-col text-center justify-center items-center   `}>
               <Image className='w-[83px] h-[83px]' src={item.image} alt={item.title}></Image>
               <h1 className='font-bold'>{item.title}</h1>
               <p className='  text-xs'>
