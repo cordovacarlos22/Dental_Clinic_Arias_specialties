@@ -86,7 +86,7 @@ const Footer = () => {
       <section className='w-full flex justify-center items-start p-4 bg-brand-light'>
         <Image src={logo} alt=' Clinica Arias Logo'></Image>
       </section>
-      <section className='bg-brand-darker my-6 text-white capitalize  flex  w-screen flex-col lg:flex-row  justify-around  '>
+      <section className='bg-brand-darker  text-white capitalize  flex  w-screen flex-col lg:flex-row  justify-around  '>
         
         <section className='flex-1  mx-4 flex  flex-col  justify-center '>
          <h1 className='  font-bold underline  text-center lg:text-start lg:pl-4 text-md md:text-xl lg:text-2xl'>Contacto</h1>
