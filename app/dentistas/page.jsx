@@ -25,7 +25,7 @@ const Dentistas = async () => {
         <h1 className="  m-4 capitalize text-brand-darker md:text-xl lg:text-3xl font-bold pt-4  justify-center text-center">Equipo dental de Clinica Arias</h1>
       </div>
          <div className="text-center  m-10">
-        <h2 >
+        <h2  className="text-brand-darker">
           En Clínica Arias, nuestro equipo de dentistas, especialistas, higienistas y personal de apoyo comparten un único objetivo: ayudar a nuestros pacientes a alcanzar sus objetivos de salud bucal. Entendemos que muchas personas descuidan acudir al dentista por inquietud, lo que puede provocar que los pequeños problemas se agranden con el tiempo. Es por eso que hacemos todo lo posible para ayudarlo a sentirse cómodo desde el momento en que cruza nuestras puertas. Queremos construir una relación duradera y de confianza con usted para poder guiarlo a lo largo de su viaje hacia una mejor salud bucal. Nuestros médicos se mantienen actualizados sobre su educación continua para que siempre podamos brindar los mejores tratamientos disponibles en el campo. No dude en conocernos un poco mejor explorando los perfiles de nuestros médicos a continuación en Clínica Arias.
         </h2>
          </div>
@@ -33,7 +33,7 @@ const Dentistas = async () => {
         {element.map((d) => (
           <div className=" w-[220px] h-[220px] flex  m-6 flex-wrap   items-center  justify-center mx-auto " key={d.firstName}>
             {/* <Link href={`/dentistas/${d.firstName}`}> */}
-              <div className="">
+              <div className=" text-brand-dark">
               <Image className=" bg-brand-light rounded-full" width={180} height={180} src={d.avatar} alt={d.firstName}></Image>
               <div className="text-center ">
                 <h1 className="capitalize">{d.firstName} {d.firstLastName}</h1>
