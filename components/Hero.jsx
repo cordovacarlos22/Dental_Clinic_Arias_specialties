@@ -188,15 +188,16 @@ const Hero = () => {
             <h1 className={`capitalize`}>emergencia</h1>
           </div>
           {servicios && servicios.map(item => (
-            <Link key={item.title} href={`/servicios/${item.title}`}>
+            
               <HeroServicio
+                key={item.title}
                 iconClass='hover:fill-red-500'
                 icon={item.icon}
                 iconAlt={item.title}
-                headerClass='text-[#009CDD] hover:text-black'
+                headerClass='text-[#009CDD] '
                 Tittle={item.title}
               />
-            </Link>
+            
           ))}
         </section>
       </section>
