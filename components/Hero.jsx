@@ -31,7 +31,7 @@ import { MetodosPago } from './MetodosPago';
 import creditcard from '@/public/creditcard.svg'
 import ReviewsCarousel from './ReviewsCarousel';
 import Footer from './Footer';
-
+import HeaderCarousel from './HeaderCarousel';
 const servicios = [
 
   {
@@ -85,9 +85,7 @@ const servicios = [
 
 ]
 
-const OPTIONS = { loop: true }
-const SLIDE_COUNT = 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
 
 
 const Hero = () => {
@@ -137,8 +135,9 @@ const Hero = () => {
         <h1 className='capitalize text-brand-light  font-bolder text-md md:text-2xl lg:3xl m-2   lg:text-3xl font-extrabold'>Bienvenido a  Clinica Arias Especialidades Dentales</h1>
         {/* top section */}
         <section className='flex   gap-2 lg:flex-row flex-col lg:justify-center items-center  mx-2   lg:overflow-hidden '>
-          <Image className='md:rounded-l-xl  rounded-xl ' src={clinicaLobby} alt='area de espera clinica arias'></Image>
-          <Image className=' md:rounded-r-xl  rounded-md ' src={consultorio} alt=' area de consultorio'></Image>
+          {/* <Image className='md:rounded-l-xl  rounded-xl ' src={clinicaLobby} alt='area de espera clinica arias'></Image>
+          <Image className=' md:rounded-r-xl  rounded-md ' src={consultorio} alt=' area de consultorio'></Image> */}
+          <HeaderCarousel/>
         </section>
         {/* bottom section */}
         <section className='  text-center mx-auto w-4/5  lg:w-1/2 '>
