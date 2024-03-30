@@ -5,8 +5,6 @@ import React, { lazy } from 'react'
 import map from "@/public/map logo.svg";
 import Link from 'next/link';
 import smile_model from "@/public/smile_model.svg";
-import consultorio from "@/public/consultorio_clinica.svg";
-import clinicaLobby from "@/public/clinica_arias.svg"
 import HeroComponents from './HeroComponents';
 import HeroServicio from './HeroServicios';
 import family from '@/public/family.svg';
