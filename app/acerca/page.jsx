@@ -23,7 +23,6 @@ const Acerca = () => {
         <section className=' lg:flex-1 rounded-sm '>
           <Image src={clinica_6} alt='Clinica'></Image>
         </section>
-
       </div>
       <Footer />
     </>
