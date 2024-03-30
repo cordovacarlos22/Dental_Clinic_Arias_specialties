@@ -41,7 +41,7 @@ const Horario = () => {
 
   ]
   return (
-    <div className='text-white  font-thin flex-col items-center justify-center m-2 '>
+    <div className='text-white   flex-col items-center justify-center m-2 '>
      
       {horarioDeAtencion.map((d)=>(
         <p
