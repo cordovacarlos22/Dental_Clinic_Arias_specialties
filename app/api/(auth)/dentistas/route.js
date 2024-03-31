@@ -26,18 +26,18 @@ export const GET = async () => {
 
 // POST METHOD TO ADD NEW DOCTOR TO DB
 
-export const POST = async (req,res) => {
+export const POST = async (req, res) => {
   try {
-     
-      await connect();
+
+    await connect();
     const body = await req.json();
 
     const newUser = await Dentista.create(body);
-    await newUser.save(); 
+    await newUser.save();
 
     return new NextResponse(
-      JSON.stringify({ message: "User is created", user: newUser,ok: true }),
-      { status: 201, ok:true }
+      JSON.stringify({ message: "User is created", user: newUser, ok: true }),
+      { status: 201, ok: true }
     );
   } catch (error) {
     return new NextResponse(
@@ -46,7 +46,7 @@ export const POST = async (req,res) => {
         error,
       }),
       {
-        status: 500, ok :false
+        status: 500, ok: false
       }
     );
   }

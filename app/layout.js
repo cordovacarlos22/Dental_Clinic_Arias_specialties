@@ -9,7 +9,7 @@ export const metadata = {
   metadataBase: new URL(`${process.env.URL} `),
   title: " Especialidades Dentales - Clinica Arias ",
   description: "Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.",
-  url: 'http://localhost:3000',
+  url: 'https://www.clinicaariasdent.com/',
   siteName: 'Clinica Arias - Especialidades Dentales ',
   locale: 'es_SV',
   type: 'website',
@@ -20,7 +20,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: 'http://localhost:3000',
+    site: 'https://www.clinicaariasdent.com/',
     title: 'Especialidades Dentales - Clinica Arias',
     description: 'Atención odontológica integral para niños, adultos, adultos mayores y personas con capacidades especiales.',
     image: './opengraph-image.png'
@@ -37,9 +37,9 @@ export default function RootLayout({ children }) {
         <div className="fixed top-0 w-screen z-50">
           <Navbar />
         </div>
-        
-          {children}
-        
+
+        {children}
+
         <SpeedInsights />
       </body>
     </html>

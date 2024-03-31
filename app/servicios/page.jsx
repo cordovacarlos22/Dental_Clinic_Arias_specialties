@@ -65,8 +65,8 @@ const Servicios = () => {
       image: rellenos,
       description: "Un relleno repara y restaura la superficie de un diente que ha sido dañado por caries, fractura o desgaste."
     },
-    
-    
+
+
 
   ]
   return (

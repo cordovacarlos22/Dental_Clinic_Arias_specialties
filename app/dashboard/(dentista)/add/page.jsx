@@ -117,7 +117,7 @@ const AddDentista = () => {
             placeholder="avatar"
             required
           />
-          
+
 
           <input
             type="text"
